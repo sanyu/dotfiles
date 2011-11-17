@@ -1,3 +1,5 @@
+runtime bundle/pathogen/autoload/pathogen.vim
+call pathogen#infect()
 set nocompatible 
 syntax on
 set hlsearch
@@ -10,7 +12,8 @@ colorscheme vibrantink
 
 
 " Mappings
-:map <C-d> :execute 'NERDTree '<CR>
+" :map <C-d> :execute 'NERDTree '<CR>
+:map <C-d> :NERDTreeToggle<CR>
 " Number lines on/off    
 map <F2> :set number!<CR>
 map! <F2> <ESC><F2> i
@@ -22,6 +25,11 @@ map! <F4> <ESC><F4>i"
 " Highlight on/off
 map <F7> :set hls!<CR><Bar>:echo "HLSearch: " . strpart("OffOn", 3 * &hlsearch, 3)<CR>
 map! <F7> <ESC><F7>i"
+
+
+inoremap <M-o>       <Esc>o
+inoremap <C-j>       <Down>
+let g:ragtag_global_maps = 1
 
 " first, enable status line always
 set laststatus=2
