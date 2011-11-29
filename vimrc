@@ -6,10 +6,10 @@ set hlsearch
 set incsearch
 set number
 set cursorline
+
 runtime! macros/matchit.vi
 filetype plugin indent on 
 colorscheme vibrantink
-
 
 " Mappings
 " :map <C-d> :execute 'NERDTree '<CR>
@@ -35,6 +35,15 @@ let g:ragtag_global_maps = 1
 set laststatus=2
 " now set it up to change the status line based on mode
 if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermbg=5 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=2 gui=bold,reverse
+  au InsertEnter * hi StatusLine term=reverse ctermfg=3 ctermbg=1 gui=undercurl guisp=Magenta
+  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=3 gui=bold,reverse
 endif
+" set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
+set statusline+=%<                       " cut at start
+set statusline+=%2*[%n%H%M%R%W]%*        " buffer number, and flags
+set statusline+=%-40f                    " relative path
+set statusline+=%{fugitive#statusline()} " git branch
+set statusline+=%=                       " seperate between right- and left-aligned
+set statusline+=%1*%y%*%*                " file type
+set statusline+=%10((%l/%L)%)            " line and column
+set statusline+=%P                       " percentage of file
