@@ -1,6 +1,9 @@
 runtime bundle/pathogen/autoload/pathogen.vim
 call pathogen#infect()
-set nocompatible 
+set nocompatible
+if has("autocmd")
+  filetype indent plugin on
+endif
 syntax on
 set hlsearch
 set incsearch
@@ -8,7 +11,6 @@ set number
 set cursorline
 
 runtime! macros/matchit.vi
-filetype plugin indent on 
 colorscheme vibrantink
 
 " Mappings
@@ -26,9 +28,10 @@ map! <F4> <ESC><F4>i"
 map <F7> :set hls!<CR><Bar>:echo "HLSearch: " . strpart("OffOn", 3 * &hlsearch, 3)<CR>
 map! <F7> <ESC><F7>i"
 
-
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
+
+
 let g:ragtag_global_maps = 1
 
 " first, enable status line always
