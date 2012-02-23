@@ -11,7 +11,16 @@ set number
 set cursorline
 
 runtime! macros/matchit.vi
+" set t_Co=256
+" set background=light 
+" " " solarized options 
+" " " let g:solarized_termtrans = 1
+" " let g:solarized_termcolors = 16 
+" " let g:solarized_visibility = "high" 
+" " let g:solarized_contrast = "high" 
+" colorscheme solarized 
 colorscheme vibrantink
+
 
 " Mappings
 " :map <C-d> :execute 'NERDTree '<CR>
@@ -33,6 +42,8 @@ inoremap <C-j>       <Down>
 
 
 let g:ragtag_global_maps = 1
+let g:syntastic_auto_loc_list=1
+let g:syntastic_enable_signs=1
 
 " first, enable status line always
 set laststatus=2
@@ -42,11 +53,14 @@ if version >= 700
   au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=3 gui=bold,reverse
 endif
 " set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set statusline+=%<                       " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*        " buffer number, and flags
-set statusline+=%-40f                    " relative path
-set statusline+=%{fugitive#statusline()} " git branch
-set statusline+=%=                       " seperate between right- and left-aligned
-set statusline+=%1*%y%*%*                " file type
-set statusline+=%10((%l/%L)%)            " line and column
-set statusline+=%P                       " percentage of file
+set statusline+=%<                           " cut at start
+set statusline+=%2*[%n%H%M%R%W]%*            " buffer number, and flags
+set statusline+=%-40f                        " relative path
+set statusline+=%{fugitive#statusline()}     " git branch
+set statusline+=%=                           " seperate between right- and left-aligned
+set statusline+=%#warningmsg#                " Syntastic
+set statusline+=%{SyntasticStatuslineFlag()} " Syntastic
+set statusline+=%*                           " Syntastic
+set statusline+=%1*%y%*%*                    " file type
+set statusline+=%10((%l/%L)%)                " line and column
+set statusline+=%P                           " percentage of file
