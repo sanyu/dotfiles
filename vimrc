@@ -53,14 +53,17 @@ if version >= 700
   au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=3 gui=bold,reverse
 endif
 " set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set statusline+=%<                           " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*            " buffer number, and flags
-set statusline+=%-40f                        " relative path
-set statusline+=%{fugitive#statusline()}     " git branch
-set statusline+=%=                           " seperate between right- and left-aligned
-set statusline+=%#warningmsg#                " Syntastic
-set statusline+=%{SyntasticStatuslineFlag()} " Syntastic
-set statusline+=%*                           " Syntastic
-set statusline+=%1*%y%*%*                    " file type
-set statusline+=%10((%l/%L)%)                " line and column
-set statusline+=%P                           " percentage of file
+set statusline+=%<                              " cut at start
+set statusline+=%2*[%n%H%M%R%W]%*               " buffer number, and flags
+set statusline+=%-40f                           " relative path
+set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
+set statusline+=%{&ff}]                         " file format
+set statusline+=[Filetype=%Y]                   " file type
+set statusline+=\ %{fugitive#statusline()}        " git branch
+" set statusline+=%1*%y%*%*                       " file type
+set statusline+=%=                              " seperate between right- and left-aligned
+set statusline+=%#warningmsg#                   " Syntastic
+set statusline+=%{SyntasticStatuslineFlag()}    " Syntastic
+set statusline+=%*                              " Syntastic
+set statusline+=%10((%l/%L)%)                   " line and column
+set statusline+=%P                              " percentage of file
