@@ -9,6 +9,9 @@ set hlsearch
 set incsearch
 set number
 set cursorline
+set ruler
+set ai
+set si
 
 runtime! macros/matchit.vi
 " set t_Co=256
@@ -59,14 +62,30 @@ set statusline+=%-40f                           " relative path
 set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
 set statusline+=%{&ff}]                         " file format
 set statusline+=[Filetype=%Y]                   " file type
-set statusline+=\ %{fugitive#statusline()}        " git branch
-" set statusline+=%1*%y%*%*                       " file type
-set statusline+=%=                              " seperate between right- and left-aligned
-set statusline+=%#warningmsg#                   " Syntastic
-set statusline+=%{SyntasticStatuslineFlag()}    " Syntastic
-set statusline+=%*                              " Syntastic
-set statusline+=%10((%l/%L)%)                   " line and column
-set statusline+=%P                              " percentage of file
+set statusline+=\ %{fugitive#statusline()}      " git branch
+"display a warning if &paste is set
+set statusline+=%#error#
+set statusline+=%{&paste?'[paste]':''}
+set statusline+=%*
+" set statusline+=%1*%y%*%*                     	" file type
+set statusline+=%=                              	" seperate between right- and left-aligned
+set statusline+=%#warningmsg#                   	" Syntastic
+set statusline+=%{SyntasticStatuslineFlag()}    	" Syntastic
+set statusline+=%*                              	" Syntastic
+set statusline+=%{StatuslineCurrentHighlight()}\ \ 	" current highlight
+set statusline+=%c,     				" cursor column
+set statusline+=%1((%l/%L)%)                   	" line and total lines
+set statusline+=%P                              	" percentage of file
+
+"return the syntax highlight group under the cursor ''
+function! StatuslineCurrentHighlight()
+    let name = synIDattr(synID(line('.'),col('.'),1),'name')
+    if name == ''
+        return ''
+    else
+        return '[' . name . ']'
+    endif
+endfunction
 
 function! InitializeDirectories()
     let separator = "." 
