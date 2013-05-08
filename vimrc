@@ -1,9 +1,9 @@
-runtime bundle/pathogen/autoload/pathogen.vim
-call pathogen#infect()
-set nocompatible
-if has("autocmd")
-  filetype indent plugin on
-endif
+"The first time run
+"git clone https://github.com/gmarik/vundle.git ~/dotfiles/vim/bundle/vundle
+"vim -u ~/dotfiles/bundles.vim +BundleInstall +q
+"
+
+source ~/dotfiles/bundles.vim
 syntax on
 set hlsearch
 set incsearch
@@ -12,16 +12,10 @@ set cursorline
 set ruler
 set ai
 set si
+set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 runtime! macros/matchit.vi
-" set t_Co=256
-" set background=light 
-" " " solarized options 
-" " " let g:solarized_termtrans = 1
-" " let g:solarized_termcolors = 16 
-" " let g:solarized_visibility = "high" 
-" " let g:solarized_contrast = "high" 
-" colorscheme solarized 
+
 colorscheme vibrantink
 
 
@@ -50,11 +44,7 @@ let g:syntastic_enable_signs=1
 
 " first, enable status line always
 set laststatus=2
-" now set it up to change the status line based on mode
-if version >= 700
-  au InsertEnter * hi StatusLine term=reverse ctermfg=3 ctermbg=1 gui=undercurl guisp=Magenta
-  au InsertLeave * hi StatusLine term=reverse ctermfg=0 ctermbg=3 gui=bold,reverse
-endif
+"
 " set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
 set statusline+=%<                              " cut at start
 set statusline+=%2*[%n%H%M%R%W]%*               " buffer number, and flags
