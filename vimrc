@@ -15,7 +15,6 @@ set si
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
 
 runtime! macros/matchit.vi
-
 colorscheme vibrantink
 
 
@@ -44,28 +43,31 @@ let g:syntastic_enable_signs=1
 
 " first, enable status line always
 set laststatus=2
+set noshowmode
+set encoding=utf-8
 "
 " set statusline=%<%f\ %h%m%r%{fugitive#statusline()}%=%-14.(%l,%c%V%)\ %P
-set statusline+=%<                              " cut at start
-set statusline+=%2*[%n%H%M%R%W]%*               " buffer number, and flags
-set statusline+=%-40f                           " relative path
-set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
-set statusline+=%{&ff}]                         " file format
-set statusline+=[Filetype=%Y]                   " file type
-set statusline+=\ %{fugitive#statusline()}      " git branch
-"display a warning if &paste is set
-set statusline+=%#error#
-set statusline+=%{&paste?'[paste]':''}
-set statusline+=%*
-" set statusline+=%1*%y%*%*                     	" file type
-set statusline+=%=                              	" seperate between right- and left-aligned
-set statusline+=%#warningmsg#                   	" Syntastic
-set statusline+=%{SyntasticStatuslineFlag()}    	" Syntastic
-set statusline+=%*                              	" Syntastic
-set statusline+=%{StatuslineCurrentHighlight()}\ \ 	" current highlight
-set statusline+=%c,     				" cursor column
-set statusline+=%1((%l/%L)%)                   	" line and total lines
-set statusline+=%P                              	" percentage of file
+
+" set statusline+=%<                              " cut at start
+" set statusline+=%2*[%n%H%M%R%W]%*               " buffer number, and flags
+" set statusline+=%-40f                           " relative path
+" set statusline+=[%{strlen(&fenc)?&fenc:'none'}, " file encoding
+" set statusline+=%{&ff}]                         " file format
+" set statusline+=[Filetype=%Y]                   " file type
+" set statusline+=\ %{fugitive#statusline()}      " git branch
+" "display a warning if &paste is set
+" set statusline+=%#error#
+" set statusline+=%{&paste?'[paste]':''}
+" set statusline+=%*
+" " set statusline+=%1*%y%*%*                     	" file type
+" set statusline+=%=                              	" seperate between right- and left-aligned
+" set statusline+=%#warningmsg#                   	" Syntastic
+" set statusline+=%{SyntasticStatuslineFlag()}    	" Syntastic
+" set statusline+=%*                              	" Syntastic
+" set statusline+=%{StatuslineCurrentHighlight()}\ \ 	" current highlight
+" set statusline+=%c,     				" cursor column
+" set statusline+=%1((%l/%L)%)                   	" line and total lines
+" set statusline+=%P                              	" percentage of file
 
 "return the syntax highlight group under the cursor ''
 function! StatuslineCurrentHighlight()
