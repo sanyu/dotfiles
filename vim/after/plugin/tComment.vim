@@ -1,1 +1,1 @@
-call tcomment#DefineType('puppet','#%s')
+call tcomment#type#Define('puppet','#%s')
