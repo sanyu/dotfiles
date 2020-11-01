@@ -13,6 +13,7 @@ set ruler
 set ai
 set si
 set rtp+=~/.vim/bundle/powerline/powerline/bindings/vim
+set rtp+=/usr/local/opt/fzf
 
 runtime! macros/matchit.vi
 colorscheme vibrantink
@@ -36,10 +37,25 @@ map! <F7> <ESC><F7>i"
 inoremap <M-o>       <Esc>o
 inoremap <C-j>       <Down>
 
-
+let g:ackprg = 'ag --vimgrep --smart-case'                                                   
+cnoreabbrev ag Ack
+cnoreabbrev aG Ack
+cnoreabbrev Ag Ack
+cnoreabbrev AG Ack
 let g:ragtag_global_maps = 1
 let g:syntastic_auto_loc_list=1
 let g:syntastic_enable_signs=1
+
+let g:fugitive_gitlab_domains = [ 'https://git.papt.to', 'https://gitlab.belus.apptio.lan' ]
+" make YCM compatible with UltiSnips (using supertab)
+let g:ycm_key_list_select_completion = ['<C-n>', '<Down>']
+let g:ycm_key_list_previous_completion = ['<C-p>', '<Up>']
+let g:SuperTabDefaultCompletionType = '<C-n>'
+
+" better key bindings for UltiSnipsExpandTrigger
+let g:UltiSnipsExpandTrigger = "<tab>"
+let g:UltiSnipsJumpForwardTrigger = "<tab>"
+let g:UltiSnipsJumpBackwardTrigger = "<s-tab>"
 
 " first, enable status line always
 set laststatus=2
@@ -68,6 +84,14 @@ set encoding=utf-8
 " set statusline+=%c,     				" cursor column
 " set statusline+=%1((%l/%L)%)                   	" line and total lines
 " set statusline+=%P                              	" percentage of file
+
+set guifont=Inconsolata\ for\ Powerline:h15
+let g:Powerline_symbols = 'fancy'
+set encoding=utf-8
+set t_Co=256
+set fillchars+=stl:\ ,stlnc:\
+set term=xterm-256color
+set termencoding=utf-8
 
 "return the syntax highlight group under the cursor ''
 function! StatuslineCurrentHighlight()
