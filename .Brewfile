@@ -2,7 +2,6 @@ tap "alecthomas/tap"
 tap "argoproj/tap"
 tap "boz/repo"
 tap "chef/chef"
-tap "dandavison/delta", "https://github.com/dandavison/delta"
 tap "derailed/k9s"
 tap "go-task/tap"
 tap "goreleaser/tap"
@@ -13,9 +12,13 @@ tap "homebrew/core"
 tap "jzelinskie/faq"
 tap "k14s/tap"
 tap "robscott/tap"
+tap "splunk/tap"
 tap "starkandwayne/kubernetes"
+tap "toolbox/tap", "git@cd.splunkdev.com:toolbox/homebrew-tap.git"
+tap "layer5io/tap"
 
 
+brew "asdf"
 # Get stuff done with container-native workflows for Kubernetes
 brew "argo"
 # Automatic configure script builder
@@ -39,9 +42,10 @@ brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Open source programming language to build simple/reliable/efficient software
-brew "go", link: false
+brew "go"#, link: false
 # Go dependency management tool
 brew "dep"
+brew "dive"
 # Dancer's shell, or distributed shell
 brew "dsh"
 # Modern replacement for 'ls'
@@ -52,6 +56,8 @@ brew "fzf"
 brew "glide"
 # GNU version of the tar archiving utility
 brew "gnu-tar"
+brew "localstack"
+brew "mesheryctl"
 # Generic library support script
 brew "libtool"
 # Manage compile and link flags for libraries
@@ -60,6 +66,7 @@ brew "pkg-config"
 brew "unbound"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
+brew "golang-migrate"
 # Simple jira command-line client in Go
 brew "go-jira"
 # Go programming environment (1.12)
@@ -126,10 +133,12 @@ brew "pdsh"
 brew "pinentry-mac"
 # Tool for managing OCI containers and pods
 brew "podman"
+brew "postgresql"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Service monitoring system and time series database
 brew "prometheus"
+brew "protobuf"
 # Password generator
 brew "pwgen"
 # Persistent key-value database, with built-in net interface
@@ -196,7 +205,16 @@ brew "jzelinskie/faq/faq"
 brew "k14s/tap/kwt"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
 brew "robscott/tap/kube-capacity"
-
+# Qbec (pronounced like the Canadian province) is a CLI tool that allows you to create Kubernetes objects on multiple Kubernetes clusters or namespaces configured correctly for the target environment in question.
+brew "splunk/tap/qbec"
+# okta-aws CLI
+brew "toolbox/tap/okta-aws"
+# okta-aws-login CLI
+brew "toolbox/tap/okta-aws-login"
+# okta-docker-login CLI
+brew "toolbox/tap/okta-docker-login"
+# okta-kube-token CLI
+brew "toolbox/tap/okta-kube-token"
 
 cask "1password"
 cask "alfred"
@@ -210,12 +228,13 @@ cask "kindle"
 cask "notion"
 cask "rectangle"
 cask "spotify"
+cask "tidal"
 cask "the-unarchiver"
 cask "tidal"
 cask "vlc"
-cask "witch"
-cask "zoomus"
-
+cask "zoom"
+#$work related
+cask "nosql-workbench"
 
 
 mas "1Password 7", id: 1333542190
