@@ -74,6 +74,7 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-unimpaired'
 Plug 'tomtom/tcomment_vim'
+Plug 'rizzatti/dash.vim'             " Make API lookups using Dash
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -89,7 +90,7 @@ Plug 'google/vim-jsonnet', {'for': 'jsonnet'}                 " Jsonnet supportk
 Plug 'hashivim/vim-vagrant', {'for': 'vagrant'}               " Vagrant support
 Plug 'fatih/vim-go', {'for': 'go','do': ':GoInstallBinaries'} " Go support
 Plug 'sebdah/vim-delve', {'for': 'go'}                        " Delve debbuger for Gob
-Plug 'zchee/deoplete-go', { 'do': 'make'}                     " Go autocompletion
+" Plug 'zchee/deoplete-go', { 'do': 'make'}                     " Go autocompletion
 Plug 'godoctor/godoctor.vim', {'for': 'go'}                   " Gocode refactoring tool
 Plug 'ekalinin/Dockerfile.vim', {'for': 'Dockerfile'}         " Dockerfiles support
 Plug 'fishbullet/deoplete-ruby'                               " Ruby auto completion
@@ -207,6 +208,13 @@ endfunctionfunction! Multiple_cursors_after()
     let b:deoplete_disable_auto_complete = 0
 endfunction
 
+"----------------------------------------------
+" Plugin: 'fatih/vim-go.vim'
+"----------------------------------------------
+
+call deoplete#custom#option('omni_patterns', { 'go': '[^. *\t]\.\w*' })
+
+
 " Run goimports when running gofmt
 let g:go_fmt_command = "goimports"
 
@@ -227,7 +235,9 @@ let g:go_highlight_extra_types = 1
 let g:go_echo_command_info = 1
 
 " Show type information
-let g:go_info_mode='guru'
+let g:go_def_mode= 'gopls'
+let g:go_info_mode='gopls'
+" let g:go_info_mode='guru'
 let g:go_auto_type_info = 1
 
 " Highlight variable uses
@@ -239,7 +249,7 @@ let g:go_list_type = "quickfix"
 " Add the failing test name to the output of :GoTest
 let g:go_test_show_name = 1
 
-let g:go_gocode_propose_source=1
+" let g:go_gocode_propose_source=1
 
 " gometalinter configuration
 let g:go_metalinter_command = ""
@@ -286,7 +296,7 @@ endif
 "    let b:deoplete_disable_auto_complete = 0
 "endfunction
 
-let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
+" let g:deoplete#sources#go#gocode_binary = $HOME.'/go/bin/gocode'
 let g:deoplete#sources#go#source_importer = 1
 
 " " use tab to forward cycle
@@ -372,6 +382,18 @@ let g:vim_markdown_frontmatter = 1      " for YAML format
 let g:vim_markdown_toml_frontmatter = 1 " for TOML format
 let g:vim_markdown_json_frontmatter = 1 " for JSON format
 
+"----------------------------------------------
+" Speed up vim-go
+"----------------------------------------------
+" disable current line hilite
+set nocursorcolumn
+" color to col 128
+set synmaxcol=128
+syntax sync minlines=256
+set re=1
+set lazyredraw
+:nnoremap <leader>b :GoDebugBreakpoint<CR>
+:nnoremap <leader>n :GoDebugContinue<CR>
 
 "----------------------------------------------
 " General settings
