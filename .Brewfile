@@ -12,9 +12,7 @@ tap "homebrew/core"
 tap "jzelinskie/faq"
 tap "k14s/tap"
 tap "robscott/tap"
-tap "splunk/tap"
 tap "starkandwayne/kubernetes"
-tap "toolbox/tap", "git@cd.splunkdev.com:toolbox/homebrew-tap.git"
 tap "layer5io/tap"
 
 
@@ -96,7 +94,7 @@ brew "jsonnet-bundler"
 # Run local Kubernetes cluster in Docker
 brew "kind"
 # Kubernetes command-line interface
-brew "kubernetes-cli"
+brew "kubernetes-cli", link: false
 # Production Grade K8s Installation, Upgrades, and Management
 brew "kops"
 # Package manager for kubectl plugins
@@ -192,7 +190,7 @@ brew "alecthomas/tap/gometalinter"
 # kubernetes tail - pod log viewer
 brew "boz/repo/kail"
 # A viewer for git and diff output
-brew "dandavison/delta/git-delta"
+brew "git-delta"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
 # Task runner / simpler Make alternative written in Go
@@ -205,18 +203,7 @@ brew "jzelinskie/faq/faq"
 brew "k14s/tap/kwt"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
 brew "robscott/tap/kube-capacity"
-# Qbec (pronounced like the Canadian province) is a CLI tool that allows you to create Kubernetes objects on multiple Kubernetes clusters or namespaces configured correctly for the target environment in question.
-brew "splunk/tap/qbec"
-# okta-aws CLI
-brew "toolbox/tap/okta-aws"
-# okta-aws-login CLI
-brew "toolbox/tap/okta-aws-login"
-# okta-docker-login CLI
-brew "toolbox/tap/okta-docker-login"
-# okta-kube-token CLI
-brew "toolbox/tap/okta-kube-token"
 
-cask "1password"
 cask "alfred"
 cask "dash"
 cask "flux"
@@ -224,32 +211,34 @@ cask "google-cloud-sdk"
 cask "inspec"
 cask "intel-power-gadget"
 cask "iterm2"
-cask "kindle"
 cask "notion"
 cask "rectangle"
 cask "spotify"
 cask "tidal"
 cask "the-unarchiver"
-cask "tidal"
 cask "vlc"
 cask "zoom"
 #$work related
 cask "nosql-workbench"
 
 
+mas "Spark – Email App by Readdle", id: 1176895641
+mas "Slack", id: 803453959
+mas "Kindle", id: 405399194
 mas "1Password 7", id: 1333542190
+mas "Paste - Clipboard Manager", id: 967805235
+mas "Lightshot Screenshot", id: 526298438
+mas "Toggl Track", id: 957734279
+mas "Things", id: 904280696
+mas "Reeder 5", id: 1529448980
+mas "The Clock", id: 488764545
+mas "Xcode", id: 497799835
+mas "Instapaper", id: 1481302432
+
 mas "Fantastical", id: 975937182
 mas "Focus To-Do", id: 1258530160
-mas "Instapaper", id: 1481302432
-mas "Lightshot Screenshot", id: 526298438
 mas "Living Earth Desktop", id: 539362919
 mas "Memory Diag", id: 748212890
 mas "MonthlyCal", id: 935250717
-mas "Paste", id: 967805235
 mas "PiPifier", id: 1160374471
-mas "Reeder", id: 1529448980
 mas "Silicio", id: 933627574
-mas "The Clock", id: 488764545
-mas "Things", id: 904280696
-mas "Toggl Track", id: 957734279
-mas "Xcode", id: 497799835
