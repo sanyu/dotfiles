@@ -67,8 +67,6 @@ brew "gnupg"
 brew "golang-migrate"
 # Simple jira command-line client in Go
 brew "go-jira"
-# Go programming environment (1.12)
-brew "go@1.12"
 # WSDL2Go code generation as well as its SOAP proxy
 brew "gowsdl"
 # Graph visualization software from AT&T and Bell Labs
@@ -99,6 +97,7 @@ brew "kubernetes-cli", link: false
 brew "kops"
 # Package manager for kubectl plugins
 brew "krew"
+brew "kubebuilder"
 # Kubernetes prompt info for bash and zsh
 brew "kube-ps1"
 # Manage complex enterprise Kubernetes environments as code
@@ -169,8 +168,6 @@ brew "the_silver_searcher"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Extract, view, and test RAR archives
-brew "unrar"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Executes a program periodically, showing output fullscreen
@@ -205,19 +202,26 @@ brew "k14s/tap/kwt"
 brew "robscott/tap/kube-capacity"
 
 cask "alfred"
+cask "calibre"
 cask "dash"
+cask "docker"
 cask "flux"
 cask "google-cloud-sdk"
 cask "inspec"
 cask "intel-power-gadget"
 cask "iterm2"
 cask "notion"
+cask "obsidian"
 cask "rectangle"
 cask "spotify"
 cask "tidal"
 cask "the-unarchiver"
 cask "vlc"
-cask "zoom"
+# Extract, view, and test RAR archives
+cask "rar"
+cask "raindropio"
+cask "insomnia"
+# cask "zoom"
 #$work related
 cask "nosql-workbench"
 
@@ -241,4 +245,3 @@ mas "Living Earth Desktop", id: 539362919
 mas "Memory Diag", id: 748212890
 mas "MonthlyCal", id: 935250717
 mas "PiPifier", id: 1160374471
-mas "Silicio", id: 933627574
