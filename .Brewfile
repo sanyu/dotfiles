@@ -203,6 +203,9 @@ brew "k14s/tap/kwt"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
 brew "robscott/tap/kube-capacity"
 
+#Temp tools
+brew "cntlm"
+
 cask "alfred"
 cask "calibre"
 cask "dash"
