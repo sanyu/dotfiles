@@ -210,6 +210,8 @@ brew "base16-manager"
 brew "shellcheck"
 #Temp tools
 brew "cntlm"
+tap "samuong/alpaca"
+brew "samuong/alpaca/alpaca"
 
 cask "alfred"
 cask "calibre"
