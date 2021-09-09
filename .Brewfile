@@ -203,6 +203,9 @@ brew "k14s/tap/kwt"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
 brew "robscott/tap/kube-capacity"
 
+tap "chrokh/tap"
+brew "base16-manager"
+
 #Temp tools
 brew "cntlm"
 
