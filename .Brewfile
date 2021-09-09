@@ -17,6 +17,7 @@ tap "starkandwayne/kubernetes"
 tap "layer5io/tap"
 
 
+brew "antigen"
 brew "asdf"
 # Get stuff done with container-native workflows for Kubernetes
 brew "argo"
