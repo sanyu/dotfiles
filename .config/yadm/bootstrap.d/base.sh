@@ -1,4 +1,9 @@
-#!/bin/sh
+#!/usr/bin/env bash
+
+cd "$HOME" || exit
+
+echo "Init submodules"
+yadm submodule update --recursive --init
 
 system_type=$(uname -s)
 
@@ -20,12 +25,25 @@ if [ "$system_type" = "Darwin" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   fi
 
+  if [ ! -f "$HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme" ]; then
+    echo "Installing Powerlevel10k"
+    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
+  fi
+
+  # Include local functions/aliases/environments:
+  zsh_dotfiles=$(find "${HOME}/.zsh_custom" -name '*.zsh')
+  for f in "${zsh_dotfiles[@]}";do
+      if [ -f "$f" ]; then
+          ln -sf "$f" "${HOME}/.oh-my-zsh/custom/"
+      fi
+  done
+
   if [ -d "$HOME/.iterm2" ]; then
     echo "Setting iTerm preference folder"
     defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.iterm2"
   fi
 
   # Install Neovim python module
-  pip3 install pynvim
+  python3 -c "import pynvim" || pip3 install pynvim
 
 fi
