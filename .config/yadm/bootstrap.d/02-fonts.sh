@@ -1,5 +1,58 @@
 #!/usr/bin/env zsh
 
+setopt extendedglob
+
+function iterm_get() {
+  /usr/libexec/PlistBuddy -c "Print :$1" ~/Library/Preferences/com.googlecode.iterm2.plist
+}
+
+local terminal iterm2_font_size iterm2_old_font=0 can_install_font=0
+() {
+  [[ $P9K_SSH == 0 ]] || return
+  if [[ "$(uname)" == Linux && "$(uname -o)" == Android ]]; then
+    (( $+commands[termux-reload-settings] )) || return
+    (( $+commands[curl] )) || return
+    if [[ -f ~/.termux/font.ttf ]]; then
+      [[ -r ~/.termux/font.ttf ]] || return
+      [[ -w ~/.termux/font.ttf ]] || return
+      ! grep -q 'MesloLGS NF' ~/.termux/font.ttf 2>/dev/null || return
+    fi
+    if [[ -f ~/.termux ]]; then
+      [[ -d ~/.termux && -w ~/.termux ]] || return
+    else
+      [[ -w ~ ]] || return
+    fi
+    terminal=Termux
+    return 0
+  fi
+  if [[ "$(uname)" == Darwin && $TERM_PROGRAM == iTerm.app ]]; then
+    (( $+commands[curl] )) || return
+    [[ $TERM_PROGRAM_VERSION == [2-9]* ]] || return
+    if [[ -f ~/Library/Fonts ]]; then
+      [[ -d ~/Library/Fonts && -w ~/Library/Fonts ]] || return
+    else
+      [[ -d ~/Library && -w ~/Library ]] || return
+    fi
+    [[ -x /usr/libexec/PlistBuddy ]] || return
+    [[ -x /usr/bin/plutil ]] || return
+    [[ -x /usr/bin/defaults ]] || return
+    [[ -f ~/Library/Preferences/com.googlecode.iterm2.plist ]] || return
+    [[ -r ~/Library/Preferences/com.googlecode.iterm2.plist ]] || return
+    [[ -w ~/Library/Preferences/com.googlecode.iterm2.plist ]] || return
+    local guid1 && guid1="$(iterm_get '"Default Bookmark Guid"' 2>/dev/null)" || return
+    local guid2 && guid2="$(iterm_get '"New Bookmarks":0:"Guid"' 2>/dev/null)" || return
+    local font && font="$(iterm_get '"New Bookmarks":0:"Normal Font"' 2>/dev/null)" || return
+    [[ $guid1 == $guid2 ]] || return
+    [[ $font != 'MesloLGS-NF-Regular '<-> ]] || return
+    [[ $font == (#b)*' '(<->) ]] || return
+    [[ $font == 'MesloLGSNer-Regular '<-> ]] && iterm2_old_font=1
+    iterm2_font_size=$match[1]
+    terminal=iTerm2
+    return 0
+  fi
+  return 1
+} && can_install_font=1
+
 function prompt_length() {
   local -i COLUMNS=1024
   local -i x y=$#1 m
@@ -69,7 +122,7 @@ function run_command() {
   [[ -n $msg ]] && print -P " %2FOK%f"
 }
 
-if [ ! -f "$HOME/Library/Fonts/MesloLGS NF Italic.ttf" ]; then
+if (( can_install_font )); then
   local -r font_base_url='https://github.com/romkatv/powerlevel10k-media/raw/master'
   command mkdir -p -- ~/Library/Fonts || exit
   local style
@@ -79,9 +132,10 @@ if [ ! -f "$HOME/Library/Fonts/MesloLGS NF Italic.ttf" ]; then
     curl -fsSL -o ~/Library/Fonts/$file.tmp "$font_base_url/${file// /%20}"
     command mv -f -- ~/Library/Fonts/$file{.tmp,} || exit
   done
-  print -nP -- "Changing %BiTerm1%b settings ..."
+  print -nP -- "Changing %BiTerm2%b settings ..."
   local size=$iterm2_font_size
   [[ $size == 12 ]] && size=13
+  size=13
 
   local k t v settings=(
     '"Normal Font"'                                 string '"MesloLGS-NF-Regular '$size'"'
