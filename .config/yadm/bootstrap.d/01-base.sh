@@ -25,11 +25,6 @@ if [ "$system_type" = "Darwin" ]; then
     sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
   fi
 
-  if [ ! -f "$HOME/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme" ]; then
-    echo "Installing Powerlevel10k"
-    git clone --depth=1 https://github.com/romkatv/powerlevel10k.git "${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}/themes/powerlevel10k"
-  fi
-
   # Include local functions/aliases/environments:
   zsh_dotfiles=$(find "${HOME}/.zsh_custom" -name '*.zsh')
   for f in "${zsh_dotfiles[@]}";do

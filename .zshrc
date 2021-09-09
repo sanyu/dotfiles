@@ -29,6 +29,7 @@ antigen use oh-my-zsh
 # Syntax highlighting bundle.
 antigen bundle zsh-users/zsh-syntax-highlighting
 antigen bundle zsh-users/zsh-autosuggestions
+antigen theme romkatv/powerlevel10k
 
 # Load the theme.
 # antigen theme robbyrussell
@@ -57,7 +58,7 @@ POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
 POWERLEVEL9K_CUSTOM_KUBE_PS1='kube_ps1'
 # ZSH_THEME="powerlevel9k/powerlevel9k"
-ZSH_THEME="powerlevel10k/powerlevel10k"
+# ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Uncomment the following line to use case-sensitive completion.
 # CASE_SENSITIVE="true"
@@ -102,7 +103,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git battery brew bash-completion rvm bundler osx rake ruby zsh-autosuggestions kubectl kube-ps1)
-plugins=(git battery brew rvm bundler osx rake ruby zsh-autosuggestions zsh-syntax-highlighting kubectl kube-ps1)
+plugins=(git battery brew rvm bundler osx rake ruby kubectl kube-ps1)
 
 source $ZSH/oh-my-zsh.sh
 

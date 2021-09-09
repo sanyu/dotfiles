@@ -207,6 +207,7 @@ brew "robscott/tap/kube-capacity"
 tap "chrokh/tap"
 brew "base16-manager"
 
+brew "shellcheck"
 #Temp tools
 brew "cntlm"
 
