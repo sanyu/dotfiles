@@ -20,19 +20,6 @@ if [ "$system_type" = "Darwin" ]; then
     brew bundle --global
   fi
 
-  if [ ! -f "$HOME/.oh-my-zsh/oh-my-zsh.sh" ]; then
-    echo "Installing Oh My Zsh"
-    sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-  fi
-
-  # Include local functions/aliases/environments:
-  zsh_dotfiles=$(find "${HOME}/.zsh_custom" -name '*.zsh')
-  for f in "${zsh_dotfiles[@]}";do
-      if [ -f "$f" ]; then
-          ln -sf "$f" "${HOME}/.oh-my-zsh/custom/"
-      fi
-  done
-
   if [ -d "$HOME/.iterm2" ]; then
     echo "Setting iTerm preference folder"
     defaults write com.googlecode.iterm2 PrefsCustomFolder "$HOME/.iterm2"

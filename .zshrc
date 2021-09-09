@@ -9,8 +9,8 @@ fi
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
 # Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-export ZSH_CUSTOM=$HOME/.oh-my-zsh/custom
+# export ZSH=$HOME/.oh-my-zsh
+export ZSH_CUSTOM=$HOME/.zsh_custom
 export TERM="xterm-256color"
 
 
@@ -27,12 +27,15 @@ antigen use oh-my-zsh
 # antigen bundle command-not-found
 
 # Syntax highlighting bundle.
-antigen bundle zsh-users/zsh-syntax-highlighting
-antigen bundle zsh-users/zsh-autosuggestions
-antigen theme romkatv/powerlevel10k
-
+antigen bundles <<EOBUNDLES
+ zsh-users/zsh-syntax-highlighting
+ zsh-users/zsh-autosuggestions
+ zsh-users/zsh-completions
+ changyuheng/zsh-interactive-cd
+ wfxr/forgit
+EOBUNDLES
 # Load the theme.
-# antigen theme robbyrussell
+antigen theme romkatv/powerlevel10k
 
 # Tell Antigen that you're done.
 antigen apply
@@ -144,23 +147,13 @@ export PATH=/usr/local/share/python:$PATH
 
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/bin"
-
 export PATH="/usr/local/sbin:$PATH"
 
 export ASDF_DIR=$(brew --prefix asdf)
+export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-# source "/usr/local/opt/kube-ps1/share/kube-ps1.sh"
-# prompt_kube_ps1(){
-#    echo -n `kube_ps1`
-# }
 
-# Include local functions/aliases/environments:
-# while read f
-# do
-#   if [[ -f "$f" ]]; then
-#     source "$f"
-#   fi
-# done < <(find "${HOME}/.zsh.d" -name '*.zsh')
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
