@@ -234,7 +234,7 @@ cask "vlc"
 cask "rar"
 cask "raindropio"
 cask "insomnia"
-# cask "zoom"
+cask "zoom"
 #$work related
 cask "nosql-workbench"
 
