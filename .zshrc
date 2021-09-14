@@ -150,6 +150,7 @@ export PATH="$PATH:$HOME/.rvm/bin:$HOME/bin"
 export PATH="/usr/local/sbin:$PATH"
 
 export ASDF_DIR=$(brew --prefix asdf)
+source $(brew --prefix asdf)/libexec/asdf.sh
 export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
