@@ -46,7 +46,7 @@ DEFAULT_USER=sanyu
 # See https://github.com/robbyrussell/oh-my-zsh/wiki/Themes
 POWERLEVEL9K_MODE='awesome-patched'
 # POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('dir' 'vcs' 'kube_ps1')
-POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('dir' 'vcs' 'custom_kube_ps1')
+POWERLEVEL9K_LEFT_PROMPT_ELEMENTS=('dir' 'vcs')
 POWERLEVEL9K_RIGHT_PROMPT_ELEMENTS=('rvm' 'status' 'vi_mode' 'background_jobs' 'time')
 POWERLEVEL9K_RVM_BACKGROUND="black"
 POWERLEVEL9K_RVM_FOREGROUND="249"
@@ -59,7 +59,7 @@ POWERLEVEL9K_BATTERY_LOW_COLOR="red"
 POWERLEVEL9K_SHORTEN_STRATEGY="truncate_middle"
 POWERLEVEL9K_SHORTEN_DIR_LENGTH=3
 
-POWERLEVEL9K_CUSTOM_KUBE_PS1='kube_ps1'
+# POWERLEVEL9K_CUSTOM_KUBE_PS1='kube_ps1'
 # ZSH_THEME="powerlevel9k/powerlevel9k"
 # ZSH_THEME="powerlevel10k/powerlevel10k"
 
@@ -106,7 +106,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git battery brew bash-completion rvm bundler osx rake ruby zsh-autosuggestions kubectl kube-ps1)
-plugins=(git battery brew rvm bundler osx rake ruby kubectl kube-ps1)
+plugins=(git battery brew rvm bundler osx rake ruby kubectl)
 
 source $ZSH/oh-my-zsh.sh
 
