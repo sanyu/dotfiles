@@ -213,6 +213,8 @@ brew "cntlm"
 tap "samuong/alpaca"
 brew "samuong/alpaca/alpaca"
 
+
+cask "authy"
 cask "alfred"
 cask "calibre"
 cask "dash"
