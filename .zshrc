@@ -148,6 +148,7 @@ export PATH=/usr/local/share/python:$PATH
 # Add RVM to PATH for scripting. Make sure this is the last PATH variable change.
 export PATH="$PATH:$HOME/.rvm/bin:$HOME/bin"
 export PATH="/usr/local/sbin:$PATH"
+export PATH="${PATH}:${HOME}/.krew/bin"
 
 export ASDF_DIR=$(brew --prefix asdf)
 source $(brew --prefix asdf)/libexec/asdf.sh
