@@ -16,7 +16,7 @@ tap "robscott/tap"
 tap "starkandwayne/kubernetes"
 tap "layer5io/tap"
 
-
+brew "ansible"
 brew "antigen"
 brew "asdf"
 # Get stuff done with container-native workflows for Kubernetes
