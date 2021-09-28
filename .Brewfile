@@ -216,6 +216,7 @@ brew "samuong/alpaca/alpaca"
 
 cask "authy"
 cask "alfred"
+cask "bitbar"
 cask "calibre"
 cask "dash"
 cask "docker"
