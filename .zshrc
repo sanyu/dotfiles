@@ -106,7 +106,7 @@ ENABLE_CORRECTION="true"
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
 # plugins=(git battery brew bash-completion rvm bundler osx rake ruby zsh-autosuggestions kubectl kube-ps1)
-plugins=(git battery brew rvm bundler osx rake ruby kubectl)
+plugins=(git battery brew rvm bundler macos rake ruby kubectl)
 
 source $ZSH/oh-my-zsh.sh
 

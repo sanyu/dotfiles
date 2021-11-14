@@ -179,6 +179,7 @@ brew "watch"
 brew "wget"
 # HTTP benchmarking tool
 brew "wrk"
+brew "yarn"
 # Yet Another Dotfiles Manager
 brew "yadm"
 # Process YAML documents from the CLI
