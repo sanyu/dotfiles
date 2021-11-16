@@ -51,6 +51,8 @@ brew "dive"
 brew "dsh"
 # Modern replacement for 'ls'
 brew "exa"
+
+brew "eksctl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
 # Simplified Go project management, dependency management, and vendoring
