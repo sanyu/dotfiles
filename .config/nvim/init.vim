@@ -99,6 +99,7 @@ Plug 'rodjek/vim-puppet'                                      " Puppet syntax hi
 Plug 'chr4/nginx.vim'                                         " nginx syntax highlighting
 Plug 'hashivim/vim-terraform'                                 " Terraform syntax highlighting
 Plug 'plasticboy/vim-markdown'                                " Markdown syntax highlighting
+Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
 Plug 'zimbatm/haproxy.vim'                                    " HAProxy syntax highlighting
 Plug 'elzr/vim-json'                                          " Json syntax highlighting
 Plug 'hashivim/vim-packer'                                    " Packer support
