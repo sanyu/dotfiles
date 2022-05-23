@@ -87,7 +87,7 @@ Plug 'Shougo/neosnippet-snippets'  " Default snippets for many languages
 
 " Language Support
 Plug 'neomake/neomake'                                        " Syntastic replacement
-Plug 'google/vim-jsonnet', {'for': 'jsonnet'}                 " Jsonnet supportk
+Plug 'google/vim-jsonnet', {'for': 'jsonnet'}                 " Jsonnet support
 Plug 'hashivim/vim-vagrant', {'for': 'vagrant'}               " Vagrant support
 Plug 'fatih/vim-go', {'for': 'go','do': ':GoInstallBinaries'} " Go support
 Plug 'sebdah/vim-delve', {'for': 'go'}                        " Delve debbuger for Gob
@@ -99,7 +99,8 @@ Plug 'rodjek/vim-puppet'                                      " Puppet syntax hi
 Plug 'chr4/nginx.vim'                                         " nginx syntax highlighting
 Plug 'hashivim/vim-terraform'                                 " Terraform syntax highlighting
 Plug 'plasticboy/vim-markdown'                                " Markdown syntax highlighting
-Plug 'iamcco/markdown-preview.nvim', { 'do': 'cd app && yarn install'  }
+Plug 'iamcco/markdown-preview.nvim',{ 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug'] }
+" Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': 'markdown' }
 Plug 'zimbatm/haproxy.vim'                                    " HAProxy syntax highlighting
 Plug 'elzr/vim-json'                                          " Json syntax highlighting
 Plug 'hashivim/vim-packer'                                    " Packer support
@@ -113,6 +114,8 @@ Plug 'tpope/vim-projectionist'                                " Ruby
 Plug 'thoughtbot/vim-rspec'                                   " Ruby
 Plug 'ecomba/vim-ruby-refactoring',{'tag':'main'}             " Ruby
 Plug 'towolf/vim-helm'                                        " Helm Charts
+Plug 'pearofducks/ansible-vim'                                " Ansible yaml
+Plug 'lepture/vim-jinja'                                      " Jinja
 
 
 " Themes

@@ -3,6 +3,7 @@ tap "argoproj/tap"
 tap "boz/repo"
 tap "chef/chef"
 tap "derailed/k9s"
+tap "derailed/popeye"
 tap "go-task/tap"
 tap "goreleaser/tap"
 tap "homebrew/bundle"
@@ -12,9 +13,11 @@ tap "homebrew/cask-drivers"
 tap "homebrew/core"
 tap "jzelinskie/faq"
 tap "k14s/tap"
+tap "mike-engel/jwt-cli"
 tap "robscott/tap"
 tap "starkandwayne/kubernetes"
 tap "layer5io/tap"
+tap "aws/tap"
 
 brew "ansible"
 brew "antigen"
@@ -51,7 +54,7 @@ brew "dive"
 brew "dsh"
 # Modern replacement for 'ls'
 brew "exa"
-
+brew "ec2-instance-selector"
 brew "eksctl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
@@ -80,6 +83,7 @@ brew "graphviz"
 brew "gron"
 # Kubernetes package manager
 brew "helm"
+brew "helmfile"
 # Time series, events, and metrics database
 brew "influxdb"
 # Calculate various network masks, etc. from a given IP address
@@ -94,6 +98,7 @@ brew "jq"
 brew "jsonnet"
 # Package manager for Jsonnet
 brew "jsonnet-bundler"
+brew "jwt-cli"
 # Run local Kubernetes cluster in Docker
 brew "kind"
 # Kubernetes command-line interface
@@ -113,6 +118,7 @@ brew "kubectx"
 brew "kubeless"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+brew "kubeval"
 # Postgres C API library
 brew "libpq"
 # YAML Parser
@@ -159,6 +165,7 @@ brew "skopeo"
 brew "sops"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
+brew "tanka"
 # Tool to build, change, and version infrastructure
 brew "terraform", link: false
 # Improve Terraform's plan output
@@ -173,6 +180,8 @@ brew "the_silver_searcher"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Viddy
+brew "viddy"
 # Vi 'workalike' with many additional features
 brew "vim"
 # Executes a program periodically, showing output fullscreen
@@ -193,10 +202,12 @@ brew "zsh"
 brew "alecthomas/tap/gometalinter"
 # kubernetes tail - pod log viewer
 brew "boz/repo/kail"
+brew "gitlint"
 # A viewer for git and diff output
 brew "git-delta"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
+brew "derailed/popeye/popeye"
 # Task runner / simpler Make alternative written in Go
 brew "go-task/tap/go-task"
 # Deliver Go binaries as fast and easily as possible
@@ -207,6 +218,9 @@ brew "jzelinskie/faq/faq"
 brew "k14s/tap/kwt"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
 brew "robscott/tap/kube-capacity"
+
+tap "FairwindsOps/tap"
+brew "FairwindsOps/tap/rbac-lookup"
 
 tap "chrokh/tap"
 brew "base16-manager"

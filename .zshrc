@@ -153,6 +153,7 @@ export PATH="${PATH}:${HOME}/.krew/bin"
 export ASDF_DIR=$(brew --prefix asdf)
 source $(brew --prefix asdf)/libexec/asdf.sh
 export FZF_DEFAULT_COMMAND='ag --nocolor -g ""'
+export ASDF_DIR='/usr/local/opt/asdf/libexec'
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
