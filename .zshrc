@@ -13,8 +13,12 @@ fi
 export ZSH_CUSTOM=$HOME/.zsh_custom
 export TERM="xterm-256color"
 
-
-source /usr/local/share/antigen/antigen.zsh
+ARCH=$(uname -m)
+if [[ $ARCH == "arm64" ]]; then
+  source /opt/homebrew/share/antigen/antigen.zsh
+else
+  source /usr/local/share/antigen/antigen.zsh
+fi
 
 # Load the oh-my-zsh's library.
 antigen use oh-my-zsh
@@ -28,11 +32,11 @@ antigen use oh-my-zsh
 
 # Syntax highlighting bundle.
 antigen bundles <<EOBUNDLES
- zsh-users/zsh-syntax-highlighting
  zsh-users/zsh-autosuggestions
  zsh-users/zsh-completions
  changyuheng/zsh-interactive-cd
  wfxr/forgit
+ zsh-users/zsh-syntax-highlighting
 EOBUNDLES
 # Load the theme.
 antigen theme romkatv/powerlevel10k
@@ -136,7 +140,6 @@ fi
 # For a full list of active aliases, run `alias`.
 #
 
-source /usr/local/share/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 export GOPATH=$HOME/go
 export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin

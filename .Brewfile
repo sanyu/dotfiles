@@ -12,14 +12,12 @@ tap "homebrew/cask-versions"
 tap "homebrew/cask-drivers"
 tap "homebrew/core"
 tap "jzelinskie/faq"
-tap "k14s/tap"
 tap "mike-engel/jwt-cli"
 tap "robscott/tap"
 tap "starkandwayne/kubernetes"
 tap "layer5io/tap"
 tap "aws/tap"
 
-brew "ansible"
 brew "antigen"
 brew "asdf"
 brew "adr-tools"
@@ -101,6 +99,7 @@ brew "jsonnet-bundler"
 brew "jwt-cli"
 # Run local Kubernetes cluster in Docker
 brew "kind"
+brew "k3d"
 # Kubernetes command-line interface
 brew "kubernetes-cli", link: false
 # Production Grade K8s Installation, Upgrades, and Management
@@ -214,8 +213,6 @@ brew "go-task/tap/go-task"
 brew "goreleaser/tap/goreleaser"
 # Format Agnostic jQ
 brew "jzelinskie/faq/faq"
-# Kubernetes Workstation Tools
-brew "k14s/tap/kwt"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
 brew "robscott/tap/kube-capacity"
 
@@ -226,10 +223,17 @@ tap "chrokh/tap"
 brew "base16-manager"
 
 brew "shellcheck"
+
+tap "vmware-tanzu/carvel"
+brew "vmware-tanzu/carvel/kapp"
+
+tap "kdash-rs/kdash"
+brew "kdash-rs/kdash/kdash"
+
 #Temp tools
-brew "cntlm"
 tap "samuong/alpaca"
-brew "samuong/alpaca/alpaca"
+brew "samuong/alpaca/alpaca" unless system "[[ ! -f ~/.config/work ]]"
+brew "ansible" unless system "[[ ! -f ~/.config/work ]]"
 
 
 cask "authy"
@@ -242,7 +246,7 @@ cask "firefox"
 cask "flux"
 cask "google-cloud-sdk"
 cask "inspec"
-cask "intel-power-gadget"
+cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 cask "iterm2"
 cask "logitech-options"
 cask "lens"

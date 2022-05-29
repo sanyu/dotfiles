@@ -6,6 +6,7 @@ echo "Init submodules"
 yadm submodule update --recursive --init
 
 system_type=$(uname -s)
+arch=$(uname -m)
 
 if [ "$system_type" = "Darwin" ]; then
 
@@ -18,8 +19,15 @@ if [ "$system_type" = "Darwin" ]; then
   if [ -f "$HOME/.Brewfile" ]; then
     echo "Updating homebrew bundle"
     brew bundle --global
+
+    if [[ $arch == "arm64" ]]; then
+      /opt/homebrew/opt/fzf/install
+    else
+      /usr/local/opt/fzf/install
+    fi
   fi
 
+  set -x
   # Create cronjob
   if [ $(crontab -l | grep -c brew ) -eq 0 ]; then
     (
