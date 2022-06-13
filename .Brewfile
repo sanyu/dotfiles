@@ -43,6 +43,7 @@ brew "glib"
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+brew "clusterctl"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"#, link: false
 # Go dependency management tool
@@ -230,6 +231,14 @@ brew "vmware-tanzu/carvel/kapp"
 tap "kdash-rs/kdash"
 brew "kdash-rs/kdash/kdash"
 
+tap "vmware-tanzu/tanzu"
+brew "vmware-tanzu/tanzu/tanzu-community-edition"
+
+brew "nerdctl" unless system "[[ $(uname -m) == arm64 ]]"
+
+# We don't need Lima in Intel Macs
+brew "lima" unless system "[[ $(uname -m) == x86_64 ]]"
+
 #Temp tools
 tap "samuong/alpaca"
 brew "samuong/alpaca/alpaca" unless system "[[ ! -f ~/.config/work ]]"
@@ -241,14 +250,13 @@ cask "alfred"
 cask "bitbar"
 cask "calibre"
 cask "dash"
-cask "docker"
 cask "firefox"
 cask "flux"
 cask "google-cloud-sdk"
 cask "inspec"
 cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 cask "iterm2"
-cask "logitech-options"
+cask "logi-options-plus"
 cask "lens"
 cask "notion"
 cask "obsidian"
@@ -262,6 +270,9 @@ cask "rar"
 cask "raindropio"
 cask "insomnia"
 cask "zoom"
+cask "rancher"
+# cask "docker"
+
 #$work related
 cask "nosql-workbench"
 
@@ -278,6 +289,7 @@ mas "Reeder 5", id: 1529448980
 mas "The Clock", id: 488764545
 mas "Xcode", id: 497799835
 mas "Instapaper", id: 1481302432
+mas "Tailscale", id: 1475387142
 
 mas "Fantastical", id: 975937182
 mas "Focus To-Do", id: 1258530160
