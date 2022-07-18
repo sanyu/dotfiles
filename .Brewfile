@@ -1,87 +1,118 @@
 tap "alecthomas/tap"
+tap "ankitpokhrel/jira-cli"
 tap "argoproj/tap"
+tap "aws/tap"
 tap "boz/repo"
 tap "chef/chef"
+tap "choria-io/tap"
+tap "chrokh/tap"
 tap "derailed/k9s"
 tap "derailed/popeye"
+tap "fairwindsops/tap"
 tap "go-task/tap"
 tap "goreleaser/tap"
 tap "homebrew/bundle"
 tap "homebrew/cask"
-tap "homebrew/cask-versions"
 tap "homebrew/cask-drivers"
+tap "homebrew/cask-versions"
 tap "homebrew/core"
 tap "jzelinskie/faq"
+tap "kdash-rs/kdash"
+tap "layer5io/tap"
 tap "mike-engel/jwt-cli"
 tap "robscott/tap"
+tap "samuong/alpaca"
 tap "starkandwayne/kubernetes"
-tap "layer5io/tap"
-tap "aws/tap"
-
-brew "antigen"
-brew "asdf"
+tap "vmware-tanzu/carvel"
+tap "vmware-tanzu/tanzu"
+# CLI tool for working with Architecture Decision Records
 brew "adr-tools"
+# Plugin manager for zsh, inspired by oh-my-zsh and vundle
+brew "antigen"
 # Get stuff done with container-native workflows for Kubernetes
 brew "argo"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
+# Generic library support script
+brew "libtool"
+# YAML Parser
+brew "libyaml"
 # Cryptography and SSL/TLS Toolkit
 brew "openssl@1.1"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.9"
+# Library for command-line editing
+brew "readline"
+# Extendable version manager with support for Ruby, Node.js, Erlang & more
+brew "asdf"
+# GNU database manager
+brew "gdbm"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Portable Foreign Function Interface library
+brew "libffi"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
+brew "python@3.9"
 # Core application library for C
 brew "glib"
+# Manage compile and link flags for libraries
+brew "pkg-config"
+# Ruby environment tool
+brew "chruby"
+brew "choria-io/tap/appbuilder"
+# Home for the Cluster Management API work, a subproject of sig-cluster-lifecycle
+brew "clusterctl"
 # Cross-platform make
 brew "cmake"
-# GNU File, Shell, and Text utilities
-brew "coreutils"
-brew "clusterctl"
 # Open source programming language to build simple/reliable/efficient software
-brew "go"#, link: false
+brew "go"
 # Go dependency management tool
 brew "dep"
+# Tool for exploring each layer in a docker image
 brew "dive"
 # Dancer's shell, or distributed shell
 brew "dsh"
+# Simple command-line tool for creating clusters on Amazon EKS
+brew "eksctl"
 # Modern replacement for 'ls'
 brew "exa"
-brew "ec2-instance-selector"
-brew "eksctl"
 # Command-line fuzzy finder written in Go
 brew "fzf"
+# Syntax-highlighting pager for git and diff output
+brew "git-delta"
+# Linting for your git commit messages
+brew "gitlint"
 # Simplified Go project management, dependency management, and vendoring
 brew "glide"
 # GNU version of the tar archiving utility
 brew "gnu-tar"
-brew "localstack"
-brew "mesheryctl"
-# Generic library support script
-brew "libtool"
-# Manage compile and link flags for libraries
-brew "pkg-config"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
-brew "golang-migrate"
 # Simple jira command-line client in Go
-brew "go-jira"
+brew "go-jira", link: false
+# Database migrations CLI tool
+brew "golang-migrate"
 # WSDL2Go code generation as well as its SOAP proxy
 brew "gowsdl"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Framework for layout and rendering of i18n text
+brew "pango"
+# Library to render SVG files using Cairo
+brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Make JSON greppable
 brew "gron"
 # Kubernetes package manager
 brew "helm"
+# Deploy Kubernetes Helm Charts
 brew "helmfile"
 # Time series, events, and metrics database
 brew "influxdb"
@@ -97,36 +128,48 @@ brew "jq"
 brew "jsonnet"
 # Package manager for Jsonnet
 brew "jsonnet-bundler"
-brew "jwt-cli"
+# Little helper to run CNCF's k3s in Docker
+brew "k3d"
 # Run local Kubernetes cluster in Docker
 brew "kind"
-brew "k3d"
 # Kubernetes command-line interface
 brew "kubernetes-cli", link: false
 # Production Grade K8s Installation, Upgrades, and Management
 brew "kops"
 # Package manager for kubectl plugins
 brew "krew"
-brew "kubebuilder"
 # Kubernetes prompt info for bash and zsh
 brew "kube-ps1"
+# SDK for building Kubernetes APIs using CRDs
+brew "kubebuilder"
 # Manage complex enterprise Kubernetes environments as code
 brew "kubecfg"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
 # Kubernetes Native Serverless Framework
 brew "kubeless"
+# Kubernetes controller and tool for one-way encrypted Secrets
+brew "kubeseal"
+# Validate Kubernetes configuration files, supports multiple Kubernetes versions
+brew "kubeval"
+# Application Platform based on Kubernetes and Open Application Model
+brew "kubevela"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
-brew "kubeval"
 # Postgres C API library
 brew "libpq"
-# YAML Parser
-brew "libyaml"
+# Emulator for x86 and PowerPC
+brew "qemu"
+# Linux virtual machines
+brew "lima"  unless system "[[ $(uname -m) == x86_64 ]]"
+# Fully functional local AWS cloud stack
+brew "localstack"
 # Mac App Store command-line interface
 brew "mas"
 # Run a Kubernetes cluster locally
 brew "minikube"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Remote terminal application
 brew "mosh"
 # 'traceroute' and 'ping' in a single tool
@@ -141,14 +184,16 @@ brew "pdsh"
 brew "pinentry-mac"
 # Tool for managing OCI containers and pods
 brew "podman"
+# Object-relational database system
 brew "postgresql"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Service monitoring system and time series database
 brew "prometheus"
-brew "protobuf"
 # Password generator
 brew "pwgen"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Function As A Service on top of Kubernetes, riff is for functions
@@ -159,12 +204,17 @@ brew "ripgrep"
 brew "rpm"
 # Powerful, clean, object-oriented scripting language
 brew "ruby"
+# Install Ruby, JRuby, Rubinius, TruffleRuby, or mruby
+brew "ruby-install"
+# Static analysis and lint tool, for (ba)sh scripts
+brew "shellcheck"
 # Work with remote images registries
 brew "skopeo"
 # Editor of encrypted files
 brew "sops"
 # Tail multiple Kubernetes pods & their containers
 brew "stern"
+# Flexible, reusable and concise configuration for Kubernetes using Jsonnet
 brew "tanka"
 # Tool to build, change, and version infrastructure
 brew "terraform", link: false
@@ -180,7 +230,7 @@ brew "the_silver_searcher"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
-# Viddy
+# Modern watch command
 brew "viddy"
 # Vi 'workalike' with many additional features
 brew "vim"
@@ -190,110 +240,133 @@ brew "watch"
 brew "wget"
 # HTTP benchmarking tool
 brew "wrk"
-brew "yarn"
 # Yet Another Dotfiles Manager
 brew "yadm"
+# JavaScript package manager
+brew "yarn"
 # Process YAML documents from the CLI
 brew "yq"
+# UNIX shell (command interpreter)
+brew "zsh"
 # Fish shell like syntax highlighting for zsh
 brew "zsh-syntax-highlighting"
-brew "zsh"
 # Concurrently run Go lint tools and normalise their output.
 brew "alecthomas/tap/gometalinter"
+# 🔥 Feature-rich interactive Jira command-line
+brew "ankitpokhrel/jira-cli/jira-cli"
+# Kubectl Argo Rollouts Plugin.
+brew "argoproj/tap/kubectl-argo-rollouts"
+# EC2 Instance Selector is a tool to filter EC2 instance types based on resource criteria
+brew "aws/tap/ec2-instance-selector"
 # kubernetes tail - pod log viewer
 brew "boz/repo/kail"
-brew "gitlint"
-# A viewer for git and diff output
-brew "git-delta"
+# A command line tool to install base16 templates and set themes globally.
+brew "chrokh/tap/base16-manager"
 # Kubernetes CLI To Manage Your Clusters In Style!
 brew "derailed/k9s/k9s"
+# A Kubernetes Cluster sanitizer and linter.
 brew "derailed/popeye/popeye"
+# Reverse Lookup for Kubernetes RBAC
+brew "fairwindsops/tap/rbac-lookup"
 # Task runner / simpler Make alternative written in Go
 brew "go-task/tap/go-task"
 # Deliver Go binaries as fast and easily as possible
 brew "goreleaser/tap/goreleaser"
 # Format Agnostic jQ
 brew "jzelinskie/faq/faq"
+# A fast and simple dashboard for Kubernetes written in Rust
+brew "kdash-rs/kdash/kdash"
+# The Cloud Native Management Plane.
+brew "layer5io/tap/mesheryctl"
+# Super fast CLI tool to decode and encode JWTs built in Rust
+brew "mike-engel/jwt-cli/jwt-cli"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
 brew "robscott/tap/kube-capacity"
-
-tap "FairwindsOps/tap"
-brew "FairwindsOps/tap/rbac-lookup"
-
-tap "chrokh/tap"
-brew "base16-manager"
-
-brew "shellcheck"
-
-tap "vmware-tanzu/carvel"
+# Kapp
 brew "vmware-tanzu/carvel/kapp"
-
-tap "kdash-rs/kdash"
-brew "kdash-rs/kdash/kdash"
-
-tap "vmware-tanzu/tanzu"
+# Tanzu Community Edition
 brew "vmware-tanzu/tanzu/tanzu-community-edition"
 
 brew "nerdctl" unless system "[[ $(uname -m) == arm64 ]]"
 
-# We don't need Lima in Intel Macs
-brew "lima" unless system "[[ $(uname -m) == x86_64 ]]"
-
-#Temp tools
-tap "samuong/alpaca"
+# $work specific packages
 brew "samuong/alpaca/alpaca" unless system "[[ ! -f ~/.config/work ]]"
 brew "ansible" unless system "[[ ! -f ~/.config/work ]]"
 
-
-cask "authy"
+# Application launcher and productivity software
 cask "alfred"
+# Two-factor authentication software
+cask "authy"
+# Utility to display the output from any script or program in the menu bar
 cask "bitbar"
+# E-books management software
 cask "calibre"
+# API documentation browser and code snippet manager
 cask "dash"
+# App to build and share containerized applications and microservices
+cask "docker"
+# Web browser
 cask "firefox"
+# Screen color temperature controller
 cask "flux"
+# Web browser
+cask "google-chrome"
+# Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
-cask "inspec"
-cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
-cask "iterm2"
-cask "logi-options-plus"
-cask "lens"
-cask "notion"
-cask "obsidian"
-cask "rectangle"
-cask "spotify"
-cask "tidal"
-cask "the-unarchiver"
-cask "vlc"
-# Extract, view, and test RAR archives
-cask "rar"
-cask "raindropio"
+# HTTP and GraphQL Client
 cask "insomnia"
-cask "zoom"
-cask "rancher"
-# cask "docker"
-
-#$work related
+cask "inspec"
+# Terminal emulator as alternative to Apple's Terminal app
+cask "iterm2"
+# Kubernetes IDE
+cask "lens"
+# Software for Logitech devices
+cask "logi-options-plus"
+# Client-side GUI application for modern database development and operations
 cask "nosql-workbench"
+# App to write, plan, collaborate, and get organized
+cask "notion"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
+# All-in-one bookmark manager
+cask "raindropio"
+# Kubernetes and container management on the desktop
+cask "rancher"
+# Archive manager for data compression and backups
+cask "rar"
+# Move and resize windows using keyboard shortcuts or snap areas
+cask "rectangle"
+# Music streaming service
+cask "spotify"
+# Messaging app with a focus on speed and security
+cask "telegram"
+# Unpacks archive files
+cask "the-unarchiver"
+# Music streaming service with high fidelity sound and hi-def video quality
+cask "tidal"
+# Multimedia player
+cask "vlc"
+# Video communication and virtual meeting platform
+cask "zoom"
 
+cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 
-mas "Spark – Email App by Readdle", id: 1176895641
-mas "Slack", id: 803453959
-mas "Kindle", id: 405399194
 mas "1Password 7", id: 1333542190
-mas "Paste - Clipboard Manager", id: 967805235
-mas "Lightshot Screenshot", id: 526298438
-mas "Toggl Track", id: 957734279
-mas "Things", id: 904280696
-mas "Reeder 5", id: 1529448980
-mas "The Clock", id: 488764545
-mas "Xcode", id: 497799835
-mas "Instapaper", id: 1481302432
-mas "Tailscale", id: 1475387142
-
 mas "Fantastical", id: 975937182
 mas "Focus To-Do", id: 1258530160
+mas "Instapaper Save", id: 1481302432
+mas "Kindle", id: 405399194
+mas "Lightshot Screenshot", id: 526298438
 mas "Living Earth Desktop", id: 539362919
 mas "Memory Diag", id: 748212890
 mas "MonthlyCal", id: 935250717
+mas "Paste", id: 967805235
 mas "PiPifier", id: 1160374471
+mas "Reeder", id: 1529448980
+mas "Slack", id: 803453959
+mas "Spark", id: 1176895641
+mas "Tailscale", id: 1475387142
+mas "The Clock", id: 488764545
+mas "Things", id: 904280696
+mas "Toggl Track", id: 957734279
+mas "Xcode", id: 497799835

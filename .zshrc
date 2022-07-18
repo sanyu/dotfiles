@@ -1,3 +1,4 @@
+
 # Enable Powerlevel10k instant prompt. Should stay close to the top of ~/.zshrc.
 # Initialization code that may require console input (password prompts, [y/n]
 # confirmations, etc.) must go above this block; everything else may go below.
@@ -141,7 +142,7 @@ fi
 #
 
 export GOPATH=$HOME/go
-export GOROOT=/usr/local/opt/go/libexec
+[[ $(uname -m) == arm64 ]] && export GOROOT=/opt/homebrew/opt/go/libexec || export GOROOT=/usr/local/opt/go/libexec
 export PATH=$PATH:$GOPATH/bin
 export PATH=$PATH:$GOROOT/bin
 
@@ -161,5 +162,23 @@ export ASDF_DIR='/usr/local/opt/asdf/libexec'
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
 
-
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
+# The globbing is a little complicated here:
+# - 'N' makes the glob pattern evaluate to nothing when it doesn't match (rather than throw a globbing error)
+# - '.' matches "regular files"
+# - 'mh+24' matches files (or directories or whatever) that are older than 24 hours.
+autoload -Uz compinit
+for dump in ~/.zcompdump(N.mh+24); do
+  compinit
+done
+compinit -C
+
+
+### MANAGED BY RANCHER DESKTOP START (DO NOT EDIT)
+export PATH="/Users/smelwani/.rd/bin:$PATH"
+### MANAGED BY RANCHER DESKTOP END (DO NOT EDIT)source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+
+source /opt/homebrew/opt/chruby/share/chruby/chruby.sh
+source /opt/homebrew/opt/chruby/share/chruby/auto.sh
+chruby ruby-3.1.2
