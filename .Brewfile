@@ -21,7 +21,6 @@ tap "kdash-rs/kdash"
 tap "layer5io/tap"
 tap "mike-engel/jwt-cli"
 tap "robscott/tap"
-tap "samuong/alpaca"
 tap "starkandwayne/kubernetes"
 tap "vmware-tanzu/carvel"
 tap "vmware-tanzu/tanzu"
@@ -174,6 +173,7 @@ brew "protobuf"
 brew "mosh"
 # 'traceroute' and 'ping' in a single tool
 brew "mtr"
+brew "nvm"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
 # Tool for creating identical machine images for multiple platforms
@@ -185,7 +185,7 @@ brew "pinentry-mac"
 # Tool for managing OCI containers and pods
 brew "podman"
 # Object-relational database system
-brew "postgresql"
+brew "postgresql@14"
 # Framework for managing multi-language pre-commit hooks
 brew "pre-commit"
 # Service monitoring system and time series database
@@ -268,6 +268,7 @@ brew "derailed/k9s/k9s"
 brew "derailed/popeye/popeye"
 # Reverse Lookup for Kubernetes RBAC
 brew "fairwindsops/tap/rbac-lookup"
+brew "fairwindsops/tap/nova"
 # Task runner / simpler Make alternative written in Go
 brew "go-task/tap/go-task"
 # Deliver Go binaries as fast and easily as possible
@@ -277,7 +278,7 @@ brew "jzelinskie/faq/faq"
 # A fast and simple dashboard for Kubernetes written in Rust
 brew "kdash-rs/kdash/kdash"
 # The Cloud Native Management Plane.
-brew "layer5io/tap/mesheryctl"
+brew "mesheryctl"
 # Super fast CLI tool to decode and encode JWTs built in Rust
 brew "mike-engel/jwt-cli/jwt-cli"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
@@ -286,15 +287,16 @@ brew "robscott/tap/kube-capacity"
 brew "vmware-tanzu/carvel/kapp"
 # Tanzu Community Edition
 brew "vmware-tanzu/tanzu/tanzu-community-edition"
-
-brew "nerdctl" unless system "[[ $(uname -m) == arm64 ]]"
+brew "ykman"
 
 # $work specific packages
-brew "samuong/alpaca/alpaca" unless system "[[ ! -f ~/.config/work ]]"
-brew "ansible" unless system "[[ ! -f ~/.config/work ]]"
+# brew "samuong/alpaca/alpaca" unless system "[[ ! -f ~/.config/work ]]"
+# brew "ansible" unless system "[[ ! -f ~/.config/work ]]"
 
 # Application launcher and productivity software
 cask "alfred"
+# Automatic tiling window manager similar to xmonad
+cask "amethyst"
 # Two-factor authentication software
 cask "authy"
 # Utility to display the output from any script or program in the menu bar
@@ -339,13 +341,14 @@ cask "rectangle"
 # Music streaming service
 cask "spotify"
 # Messaging app with a focus on speed and security
-cask "telegram"
+cask "telegram" unless system "[[ -f ~/.config/work ]]"
 # Unpacks archive files
 cask "the-unarchiver"
 # Music streaming service with high fidelity sound and hi-def video quality
 cask "tidal"
 # Multimedia player
 cask "vlc"
+cask "yubico-yubikey-manager"
 # Video communication and virtual meeting platform
 cask "zoom"
 
@@ -369,4 +372,4 @@ mas "Tailscale", id: 1475387142
 mas "The Clock", id: 488764545
 mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
-mas "Xcode", id: 497799835
+# mas "Xcode", id: 497799835
