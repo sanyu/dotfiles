@@ -308,11 +308,11 @@ cask "dash"
 # App to build and share containerized applications and microservices
 cask "docker"
 # Web browser
-cask "firefox"
+cask "firefox" unless system "[[ -f ~/.config/work ]]"
 # Screen color temperature controller
 cask "flux"
 # Web browser
-cask "google-chrome"
+cask "google-chrome" unless system "[[ -f ~/.config/work ]]"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk"
 # HTTP and GraphQL Client
@@ -350,7 +350,7 @@ cask "tidal"
 cask "vlc"
 cask "yubico-yubikey-manager"
 # Video communication and virtual meeting platform
-cask "zoom"
+cask "zoom" unless system "[[ -f ~/.config/work ]]"
 
 cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 
