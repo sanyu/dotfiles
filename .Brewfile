@@ -366,7 +366,7 @@ mas "MonthlyCal", id: 935250717
 mas "Paste", id: 967805235
 mas "PiPifier", id: 1160374471
 mas "Reeder", id: 1529448980
-mas "Slack", id: 803453959
+mas "Slack", id: 803453959 unless system "[[ -f ~/.config/work ]]"
 mas "Spark", id: 1176895641
 mas "Tailscale", id: 1475387142 unless system "[[ -f ~/.config/work ]]"
 mas "The Clock", id: 488764545
