@@ -354,7 +354,7 @@ cask "zoom" unless system "[[ -f ~/.config/work ]]"
 
 cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 
-mas "1Password 7", id: 1333542190
+mas "1Password 7", id: 1333542190 unless system "[[ -f ~/.config/work ]]"
 mas "Fantastical", id: 975937182
 mas "Focus To-Do", id: 1258530160
 mas "Instapaper Save", id: 1481302432
