@@ -197,7 +197,7 @@ brew "python@3.8"
 # Persistent key-value database, with built-in net interface
 brew "redis"
 # Function As A Service on top of Kubernetes, riff is for functions
-brew "riff"
+# brew "riff"
 # Search tool like grep and The Silver Searcher
 brew "ripgrep"
 # Standard unix software packaging tool
