@@ -302,7 +302,7 @@ cask "authy"
 # Utility to display the output from any script or program in the menu bar
 cask "bitbar"
 # E-books management software
-cask "calibre"
+cask "calibre" unless system "[[ -f ~/.config/work ]]"
 # API documentation browser and code snippet manager
 cask "dash"
 # App to build and share containerized applications and microservices
@@ -314,7 +314,7 @@ cask "flux"
 # Web browser
 cask "google-chrome" unless system "[[ -f ~/.config/work ]]"
 # Set of tools to manage resources and applications hosted on Google Cloud
-cask "google-cloud-sdk"
+cask "google-cloud-sdk" unless system "[[ -f ~/.config/work ]]"
 # HTTP and GraphQL Client
 cask "insomnia"
 cask "inspec"
@@ -355,7 +355,7 @@ cask "zoom" unless system "[[ -f ~/.config/work ]]"
 cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 
 mas "1Password 7", id: 1333542190 unless system "[[ -f ~/.config/work ]]"
-mas "Fantastical", id: 975937182
+mas "Fantastical", id: 975937182 unless system "[[ -f ~/.config/work ]]"
 mas "Focus To-Do", id: 1258530160
 mas "Instapaper Save", id: 1481302432
 mas "Kindle", id: 405399194
@@ -368,7 +368,7 @@ mas "PiPifier", id: 1160374471
 mas "Reeder", id: 1529448980
 mas "Slack", id: 803453959
 mas "Spark", id: 1176895641
-mas "Tailscale", id: 1475387142
+mas "Tailscale", id: 1475387142 unless system "[[ -f ~/.config/work ]]"
 mas "The Clock", id: 488764545
 mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
