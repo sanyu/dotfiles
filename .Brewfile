@@ -24,6 +24,8 @@ tap "robscott/tap"
 tap "starkandwayne/kubernetes"
 tap "vmware-tanzu/carvel"
 tap "vmware-tanzu/tanzu"
+tap "microsoft/git"
+
 # CLI tool for working with Architecture Decision Records
 brew "adr-tools"
 # Plugin manager for zsh, inspired by oh-my-zsh and vundle
@@ -291,7 +293,17 @@ brew "ykman"
 
 # $work specific packages
 # brew "samuong/alpaca/alpaca" unless system "[[ ! -f ~/.config/work ]]"
-# brew "ansible" unless system "[[ ! -f ~/.config/work ]]"
+
+brew "saml2aws" unless system "[[ ! -f ~/.config/work ]]"
+tap "afterpaytouch/platform", "git@github.com:afterpaytouch/homebrew-platform.git"
+brew "kubectl-updateconfig" unless system "[[ ! -f ~/.config/work ]]"
+brew "kubeup" unless system "[[ ! -f ~/.config/work ]]"
+brew "apssh" unless system "[[ ! -f ~/.config/work ]]"
+brew "kube-access-mysql" unless system "[[ ! -f ~/.config/work ]]"
+brew "kube-access-pg" unless system "[[ ! -f ~/.config/work ]]"
+brew "kube-access-redis" unless system "[[ ! -f ~/.config/work ]]"
+brew "kube-access-port-fwd" unless system "[[ ! -f ~/.config/work ]]"
+
 
 # Application launcher and productivity software
 cask "alfred"
@@ -311,10 +323,13 @@ cask "docker"
 cask "firefox" unless system "[[ -f ~/.config/work ]]"
 # Screen color temperature controller
 cask "flux"
+cask "git-credential-manager-core"
 # Web browser
 cask "google-chrome" unless system "[[ -f ~/.config/work ]]"
 # Set of tools to manage resources and applications hosted on Google Cloud
 cask "google-cloud-sdk" unless system "[[ -f ~/.config/work ]]"
+cask "google-drive"
+# Client for the Google Drive storage service
 # HTTP and GraphQL Client
 cask "insomnia"
 cask "inspec"
