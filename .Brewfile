@@ -324,6 +324,8 @@ cask "iterm2"
 cask "lens"
 # Software for Logitech devices
 cask "logi-options-plus"
+# Support for Logitech G gear
+cask "logitech-g-hub"
 # Client-side GUI application for modern database development and operations
 cask "nosql-workbench"
 # App to write, plan, collaborate, and get organized
