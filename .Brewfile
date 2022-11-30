@@ -36,6 +36,8 @@ brew "argo"
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# Cloudflare Tunnel client (formerly Argo Tunnel)
+brew "cloudflared"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Generic library support script
@@ -129,6 +131,8 @@ brew "jq"
 brew "jsonnet"
 # Package manager for Jsonnet
 brew "jsonnet-bundler"
+# A super fast CLI tool to decode and encode JWTs built in Rust.
+brew "mike-engel/jwt-cli/jwt-cli"
 # Little helper to run CNCF's k3s in Docker
 brew "k3d"
 # Run local Kubernetes cluster in Docker
