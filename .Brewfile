@@ -36,6 +36,8 @@ brew "argo"
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
 brew "automake"
+# CLI to install, manage & troubleshoot Kubernetes clusters running Cilium
+brew "cilium-cli"
 # Cloudflare Tunnel client (formerly Argo Tunnel)
 brew "cloudflared"
 # GNU File, Shell, and Text utilities
@@ -340,7 +342,9 @@ cask "inspec"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
 # Kubernetes IDE
-cask "lens"
+# cask "lens"
+# Open source build of Lens Kubernetes IDE
+cask "openlens"
 # Software for Logitech devices
 cask "logi-options-plus"
 # Support for Logitech G gear
