@@ -374,6 +374,8 @@ cask "tidal"
 # Multimedia player
 cask "vlc"
 cask "yubico-yubikey-manager"
+# Application for generating TOTP and HOTP codes
+cask "yubico-authenticator"
 # Video communication and virtual meeting platform
 cask "zoom" unless system "[[ -f ~/.config/work ]]"
 
