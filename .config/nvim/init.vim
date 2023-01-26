@@ -70,6 +70,8 @@ Plug 'mileszs/ack.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
 Plug 'shumphrey/fugitive-gitlab.vim' " gitlab for fugitive
+Plug 'mattn/webapi-vim'
+Plug 'mattn/vim-gist'
 Plug 'tpope/vim-git'
 Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
