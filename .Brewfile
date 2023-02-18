@@ -399,4 +399,5 @@ mas "Tailscale", id: 1475387142 unless system "[[ -f ~/.config/work ]]"
 mas "The Clock", id: 488764545
 mas "Things", id: 904280696
 mas "Toggl Track", id: 957734279
+mas "Timery for Toggl", id: 1425368544
 # mas "Xcode", id: 497799835
