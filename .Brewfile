@@ -42,6 +42,8 @@ brew "cilium-cli"
 brew "cloudflared"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Like cURL, but for gRPC
+brew "grpcurl"
 # Generic library support script
 brew "libtool"
 # YAML Parser
