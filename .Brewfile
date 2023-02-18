@@ -109,6 +109,8 @@ brew "golang-migrate"
 brew "gowsdl"
 # OpenType text shaping engine
 brew "harfbuzz"
+# Network, Service & Security Observability for Kubernetes using eBPF
+brew "hubble"
 # Framework for layout and rendering of i18n text
 brew "pango"
 # Library to render SVG files using Cairo
@@ -357,6 +359,8 @@ cask "nosql-workbench"
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Collaboration platform for API development
+cask "postman"
 # All-in-one bookmark manager
 cask "raindropio"
 # Kubernetes and container management on the desktop
