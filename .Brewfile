@@ -377,7 +377,7 @@ cask "telegram" unless system "[[ -f ~/.config/work ]]"
 cask "the-unarchiver"
 # Music streaming service with high fidelity sound and hi-def video quality
 cask "tidal"
-Automatic time and productivity tracking app
+# Automatic time and productivity tracking app
 cask "timing"
 # Multimedia player
 cask "vlc"
