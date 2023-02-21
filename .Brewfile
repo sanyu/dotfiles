@@ -242,6 +242,8 @@ brew "the_silver_searcher"
 brew "tmux"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# HTTP load testing tool and library
+brew "vegeta"
 # Modern watch command
 brew "viddy"
 # Vi 'workalike' with many additional features
