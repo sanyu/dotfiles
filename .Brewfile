@@ -141,6 +141,8 @@ brew "jsonnet-bundler"
 brew "mike-engel/jwt-cli/jwt-cli"
 # Little helper to run CNCF's k3s in Docker
 brew "k3d"
+# Modern load testing tool, using Go and JavaScript
+brew "k6s"
 # Run local Kubernetes cluster in Docker
 brew "kind"
 # Kubernetes command-line interface
