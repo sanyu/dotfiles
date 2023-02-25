@@ -382,7 +382,9 @@ cask "the-unarchiver"
 # Music streaming service with high fidelity sound and hi-def video quality
 cask "tidal"
 # Automatic time and productivity tracking app
-cask "timing"
+cask "timing" unless system "[[ -f ~/.config/work ]]"
+# To-do list
+cask "todoist"
 # Multimedia player
 cask "vlc"
 cask "yubico-yubikey-manager"
