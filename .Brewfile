@@ -389,6 +389,8 @@ cask "timing" unless system "[[ -f ~/.config/work ]]"
 cask "todoist"
 # Multimedia player
 cask "vlc"
+# View output from scripts in the menu bar
+cask "xbar"
 cask "yubico-yubikey-manager"
 # Application for generating TOTP and HOTP codes
 cask "yubico-authenticator"
