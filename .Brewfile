@@ -320,7 +320,7 @@ brew "kube-access-pg" unless system "[[ ! -f ~/.config/work ]]"
 brew "kube-access-redis" unless system "[[ ! -f ~/.config/work ]]"
 brew "kube-access-port-fwd" unless system "[[ ! -f ~/.config/work ]]"
 
-
+cask "1password/tap/1password-cli"
 # Application launcher and productivity software
 cask "alfred"
 # Automatic tiling window manager similar to xmonad
