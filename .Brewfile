@@ -321,6 +321,8 @@ brew "kube-access-redis" unless system "[[ ! -f ~/.config/work ]]"
 brew "kube-access-port-fwd" unless system "[[ ! -f ~/.config/work ]]"
 
 cask "1password/tap/1password-cli"
+# Password manager that keeps all passwords secure behind one password
+cask "1password"
 # Application launcher and productivity software
 cask "alfred"
 # Automatic tiling window manager similar to xmonad
