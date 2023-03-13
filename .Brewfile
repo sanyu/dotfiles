@@ -99,6 +99,8 @@ brew "glide"
 brew "gnu-tar"
 # Validating, recursive, caching DNS resolver
 brew "unbound"
+# "Github command-line tool"
+brew "gh"
 # GNU Pretty Good Privacy (PGP) package
 brew "gnupg"
 # Simple jira command-line client in Go
