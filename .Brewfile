@@ -301,6 +301,8 @@ brew "mesheryctl"
 brew "mike-engel/jwt-cli/jwt-cli"
 # kube-capacity provides an overview of the resource requests, limits, and utilization in a Kubernetes cluster
 brew "robscott/tap/kube-capacity"
+# Creates fully functional virtual k8s cluster inside host k8s cluster's namespace
+brew "vcluster"
 # Kapp
 brew "vmware-tanzu/carvel/kapp"
 # Tanzu Community Edition
