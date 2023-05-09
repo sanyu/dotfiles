@@ -333,6 +333,10 @@ cask "amethyst"
 cask "authy"
 # Utility to display the output from any script or program in the menu bar
 cask "bitbar"
+# CalDigit Thunderbolt Docking Station Utility
+cask "caldigit-docking-utility"
+# CalDigit Thunderbolt Station USB Charging & SuperDrive Support Driver
+cask "caldigit-thunderbolt-charging"
 # E-books management software
 cask "calibre" unless system "[[ -f ~/.config/work ]]"
 # API documentation browser and code snippet manager
