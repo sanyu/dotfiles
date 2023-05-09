@@ -32,6 +32,8 @@ brew "adr-tools"
 brew "antigen"
 # Get stuff done with container-native workflows for Kubernetes
 brew "argo"
+# GitOps Continuous Delivery for Kubernetes
+brew "argocd"
 # Automatic configure script builder
 brew "autoconf"
 # Tool for generating GNU Standards-compliant Makefiles
