@@ -25,6 +25,7 @@ tap "starkandwayne/kubernetes"
 tap "vmware-tanzu/carvel"
 tap "vmware-tanzu/tanzu"
 tap "microsoft/git"
+tap "GoogleContainerTools/kpt","https://github.com/GoogleContainerTools/kpt.git"
 
 # CLI tool for working with Architecture Decision Records
 brew "adr-tools"
@@ -173,6 +174,7 @@ brew "kubeval"
 brew "kubevela"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
+brew "kpt"
 # Postgres C API library
 brew "libpq"
 # Emulator for x86 and PowerPC
