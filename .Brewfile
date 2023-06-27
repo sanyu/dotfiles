@@ -160,6 +160,8 @@ brew "krew"
 brew "kube-ps1"
 # SDK for building Kubernetes APIs using CRDs
 brew "kubebuilder"
+# FAST Kubernetes manifests validator, with support for Custom Resources!
+brew "kubeconform"
 # Manage complex enterprise Kubernetes environments as code
 brew "kubecfg"
 # Tool that can switch between kubectl contexts easily and create aliases
