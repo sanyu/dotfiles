@@ -26,6 +26,7 @@ tap "vmware-tanzu/carvel"
 tap "vmware-tanzu/tanzu"
 tap "microsoft/git"
 tap "GoogleContainerTools/kpt","https://github.com/GoogleContainerTools/kpt.git"
+tap "oktadeveloper/tap/okta"
 
 # CLI tool for working with Architecture Decision Records
 brew "adr-tools"
@@ -369,6 +370,7 @@ cask "iterm2"
 # cask "lens"
 # Open source build of Lens Kubernetes IDE
 cask "openlens"
+cask "okta"
 # Software for Logitech devices
 cask "logi-options-plus"
 # Support for Logitech G gear
