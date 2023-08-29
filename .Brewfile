@@ -192,6 +192,8 @@ brew "mas"
 brew "minikube"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
+# CLI for interacting with Grafana Mimir
+brew "mimirtool"
 # Remote terminal application
 brew "mosh"
 # 'traceroute' and 'ping' in a single tool
