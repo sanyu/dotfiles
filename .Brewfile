@@ -27,6 +27,7 @@ tap "vmware-tanzu/tanzu"
 tap "microsoft/git"
 tap "GoogleContainerTools/kpt","https://github.com/GoogleContainerTools/kpt.git"
 tap "oktadeveloper/tap/okta"
+tap "robusta-dev/homebrew-krr"
 
 # CLI tool for working with Architecture Decision Records
 brew "adr-tools"
@@ -178,6 +179,8 @@ brew "kubevela"
 # Template-free customization of Kubernetes YAML manifests
 brew "kustomize"
 brew "kpt"
+# Robusta KRR (Kubernetes Resource Recommender) 
+brew "krr"
 # Postgres C API library
 brew "libpq"
 # Emulator for x86 and PowerPC
