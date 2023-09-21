@@ -168,6 +168,8 @@ brew "kubeconform"
 brew "kubecfg"
 # Tool that can switch between kubectl contexts easily and create aliases
 brew "kubectx"
+# Much more powerful alternative to kubectx and kubens
+brew "kubie"
 # Kubernetes Native Serverless Framework
 brew "kubeless"
 # Kubernetes controller and tool for one-way encrypted Secrets
