@@ -28,6 +28,7 @@ tap "microsoft/git"
 tap "GoogleContainerTools/kpt","https://github.com/GoogleContainerTools/kpt.git"
 tap "oktadeveloper/tap/okta"
 tap "robusta-dev/homebrew-krr"
+tap "aws/tap"
 
 # CLI tool for working with Architecture Decision Records
 brew "adr-tools"
@@ -90,6 +91,8 @@ brew "dive"
 brew "dsh"
 # Simple command-line tool for creating clusters on Amazon EKS
 brew "eksctl"
+# A tool for visualizing dynamic node usage within a cluster
+brew "eks-node-viewer"
 # Modern replacement for 'ls'
 brew "exa"
 # Command-line fuzzy finder written in Go
@@ -156,6 +159,8 @@ brew "kind"
 brew "kubernetes-cli", link: false
 # Production Grade K8s Installation, Upgrades, and Management
 brew "kops"
+# CLI tool to discover unused Kubernetes resources
+brew "kor"
 # Package manager for kubectl plugins
 brew "krew"
 # Kubernetes prompt info for bash and zsh
