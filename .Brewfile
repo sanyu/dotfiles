@@ -350,6 +350,8 @@ cask "alfred"
 cask "amethyst"
 # Two-factor authentication software
 cask "authy"
+# Menu bar icon organizer
+cask "bartender"
 # Utility to display the output from any script or program in the menu bar
 cask "bitbar"
 # Tool to hide status bar icons
