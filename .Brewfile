@@ -417,6 +417,8 @@ cask "tidal"
 cask "timing" unless system "[[ -f ~/.config/work ]]"
 # To-do list
 cask "todoist"
+# Tool to hide menu bar icons
+cask "vanilla"
 # Multimedia player
 cask "vlc"
 # View output from scripts in the menu bar
@@ -426,7 +428,6 @@ cask "yubico-yubikey-manager"
 cask "yubico-authenticator"
 # Video communication and virtual meeting platform
 cask "zoom" unless system "[[ -f ~/.config/work ]]"
-
 cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 
 mas "1Password 7", id: 1333542190 unless system "[[ -f ~/.config/work ]]"
