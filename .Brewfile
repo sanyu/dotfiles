@@ -352,6 +352,8 @@ cask "amethyst"
 cask "authy"
 # Utility to display the output from any script or program in the menu bar
 cask "bitbar"
+# Tool to hide status bar icons
+cask "dozer"
 # CalDigit Thunderbolt Docking Station Utility
 cask "caldigit-docking-utility"
 # CalDigit Thunderbolt Station USB Charging & SuperDrive Support Driver
