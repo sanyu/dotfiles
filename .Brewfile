@@ -375,8 +375,6 @@ cask "google-chrome" unless system "[[ -f ~/.config/work ]]"
 cask "google-cloud-sdk" unless system "[[ -f ~/.config/work ]]"
 cask "google-drive"
 # Client for the Google Drive storage service
-# Utility to hide menu bar items
-cask "hiddenbar"
 # HTTP and GraphQL Client
 cask "insomnia"
 cask "inspec"
@@ -434,6 +432,7 @@ cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 mas "1Password 7", id: 1333542190 unless system "[[ -f ~/.config/work ]]"
 mas "Fantastical", id: 975937182 unless system "[[ -f ~/.config/work ]]"
 mas "Focus To-Do", id: 1258530160
+mas "HiddenBar", id: 1452453066
 mas "Instapaper Save", id: 1481302432
 mas "Kindle", id: 405399194
 mas "Lightshot Screenshot", id: 526298438
