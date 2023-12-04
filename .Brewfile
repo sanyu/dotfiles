@@ -350,8 +350,6 @@ cask "alfred"
 cask "amethyst"
 # Two-factor authentication software
 cask "authy"
-# Menu bar icon organizer
-cask "bartender"
 # Utility to display the output from any script or program in the menu bar
 cask "bitbar"
 # CalDigit Thunderbolt Docking Station Utility
@@ -433,7 +431,6 @@ cask "intel-power-gadget" unless system "[[ $(uname -m) == arm64 ]]"
 mas "1Password 7", id: 1333542190 unless system "[[ -f ~/.config/work ]]"
 mas "Fantastical", id: 975937182 unless system "[[ -f ~/.config/work ]]"
 mas "Focus To-Do", id: 1258530160
-mas "HiddenBar", id: 1452453066
 mas "Instapaper Save", id: 1481302432
 mas "Kindle", id: 405399194
 mas "Lightshot Screenshot", id: 526298438
