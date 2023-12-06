@@ -35,6 +35,7 @@ call plug#begin(expand('~/.config/nvim/plugged'))
 Plug 'godlygeek/tabular'           " This must come before plasticboy/vim-markdown
 
 "General Plugins
+Plug 'github/copilot.vim'
 Plug 'scrooloose/nerdtree'
 Plug 'jistr/vim-nerdtree-tabs'
 Plug 'tpope/vim-commentary'
@@ -69,7 +70,7 @@ Plug 'itchyny/calendar.vim'
 Plug 'mileszs/ack.vim'
 Plug 'terryma/vim-multiple-cursors'
 Plug 'tpope/vim-surround'
-Plug 'shumphrey/fugitive-gitlab.vim' " gitlab for fugitive
+Plug 'shumphrey/fugitive-gitlab.vim'   " gitlab for fugitive
 Plug 'mattn/webapi-vim'
 Plug 'mattn/vim-gist'
 Plug 'tpope/vim-git'
@@ -77,7 +78,9 @@ Plug 'tpope/vim-repeat'
 Plug 'tpope/vim-speeddating'
 Plug 'tpope/vim-unimpaired'
 Plug 'tomtom/tcomment_vim'
-Plug 'rizzatti/dash.vim'             " Make API lookups using Dash
+Plug 'rizzatti/dash.vim'               " Make API lookups using Dash
+Plug 'nvim-treesitter/nvim-treesitter' " Orgmode dependency
+Plug 'nvim-orgmode/orgmode'
 
 " Snippets
 Plug 'SirVer/ultisnips'
@@ -441,3 +444,25 @@ set hlsearch
 set incsearch
 set ignorecase
 set smartcase
+
+lua << EOF
+
+-- Load custom tree-sitter grammar for org filetype
+require('orgmode').setup_ts_grammar()
+
+-- Tree-sitter configuration
+require'nvim-treesitter.configs'.setup {
+  -- If TS highlights are not enabled at all, or disabled via `disable` prop, highlighting will fallback to default Vim syntax highlighting
+  highlight = {
+    enable = true,
+    disable = {'org'}, -- Remove this to use TS highlighter for some of the highlights (Experimental)
+    additional_vim_regex_highlighting = {'org'}, -- Required since TS highlighter doesn't support all syntax features (conceal)
+  },
+  ensure_installed = {'org'}, -- Or run :TSUpdate org
+}
+
+require('orgmode').setup({
+  org_agenda_files = {'~/my-orgs/**/*'},
+  org_default_notes_file = '~/my-orgs/org/refile.org',
+})
+EOF
