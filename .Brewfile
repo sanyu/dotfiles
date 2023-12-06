@@ -211,6 +211,7 @@ brew "mtr"
 brew "nvm"
 # Ambitious Vim-fork focused on extensibility and agility
 brew "neovim"
+brew "node"
 # Tool for creating identical machine images for multiple platforms
 brew "packer"
 # Efficient rsh-like utility, for using hosts in parallel
