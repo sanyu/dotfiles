@@ -168,7 +168,7 @@ brew "kube-ps1"
 # SDK for building Kubernetes APIs using CRDs
 brew "kubebuilder"
 # Colorize your kubectl output
-brew install hidetatz/tap/kubecolor
+brew "hidetatz/tap/kubecolor"
 # FAST Kubernetes manifests validator, with support for Custom Resources!
 brew "kubeconform"
 # Manage complex enterprise Kubernetes environments as code
