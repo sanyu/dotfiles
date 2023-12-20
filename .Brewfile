@@ -317,6 +317,8 @@ brew "goreleaser/tap/goreleaser"
 brew "jzelinskie/faq/faq"
 # A fast and simple dashboard for Kubernetes written in Rust
 brew "kdash-rs/kdash/kdash"
+# Tool to control external monitor brightness & volume
+brew "MonitorControl"
 # The Cloud Native Management Plane.
 brew "mesheryctl"
 # Super fast CLI tool to decode and encode JWTs built in Rust
