@@ -317,8 +317,6 @@ brew "goreleaser/tap/goreleaser"
 brew "jzelinskie/faq/faq"
 # A fast and simple dashboard for Kubernetes written in Rust
 brew "kdash-rs/kdash/kdash"
-# Tool to control external monitor brightness & volume
-brew "MonitorControl"
 # The Cloud Native Management Plane.
 brew "mesheryctl"
 # Super fast CLI tool to decode and encode JWTs built in Rust
@@ -392,6 +390,8 @@ cask "okta"
 cask "logi-options-plus"
 # Support for Logitech G gear
 cask "logitech-g-hub"
+# Tool to control external monitor brightness & volume
+cask "MonitorControl"
 # Client-side GUI application for modern database development and operations
 cask "nosql-workbench"
 # App to write, plan, collaborate, and get organized
