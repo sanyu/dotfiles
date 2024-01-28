@@ -192,6 +192,8 @@ brew "kpt"
 brew "krr"
 # Postgres C API library
 brew "libpq"
+# Fly through your shell history
+brew "mcfly"
 # Emulator for x86 and PowerPC
 brew "qemu"
 # Linux virtual machines
