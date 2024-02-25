@@ -336,15 +336,6 @@ brew "ykman"
 # $work specific packages
 # brew "samuong/alpaca/alpaca" unless system "[[ ! -f ~/.config/work ]]"
 
-brew "saml2aws" unless system "[[ ! -f ~/.config/work ]]"
-tap "afterpaytouch/platform", "git@github.com:afterpaytouch/homebrew-platform.git"
-brew "kubectl-updateconfig" unless system "[[ ! -f ~/.config/work ]]"
-brew "kubeup" unless system "[[ ! -f ~/.config/work ]]"
-brew "apssh" unless system "[[ ! -f ~/.config/work ]]"
-brew "kube-access-mysql" unless system "[[ ! -f ~/.config/work ]]"
-brew "kube-access-pg" unless system "[[ ! -f ~/.config/work ]]"
-brew "kube-access-redis" unless system "[[ ! -f ~/.config/work ]]"
-brew "kube-access-port-fwd" unless system "[[ ! -f ~/.config/work ]]"
 
 cask "1password/tap/1password-cli"
 # Password manager that keeps all passwords secure behind one password
