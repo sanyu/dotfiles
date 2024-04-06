@@ -262,6 +262,8 @@ brew "terraform", link: false
 brew "terraform_landscape"
 # Thin wrapper for Terraform e.g. for locking state
 brew "terragrunt"
+# Timoni is a package manager for Kubernetes, powered by CUE and inspired by Helm.
+brew "stefanprodan/tap/timoni"
 # Terraform version manager inspired by rbenv
 brew "tfenv"
 # Code-search similar to ack
