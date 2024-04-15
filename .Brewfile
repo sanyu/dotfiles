@@ -125,6 +125,8 @@ brew "hubble"
 brew "pango"
 # Library to render SVG files using Cairo
 brew "librsvg"
+# Converts/uploads GPS waypoints, tracks, and routes
+brew "gpsbabel"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
 # Make JSON greppable
