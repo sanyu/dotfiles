@@ -395,6 +395,8 @@ cask "nosql-workbench"
 cask "notion"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Open-source software for live streaming and screen recording
+cask "obs"
 # Collaboration platform for API development
 cask "postman"
 # All-in-one bookmark manager
