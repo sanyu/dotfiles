@@ -10,6 +10,11 @@ arch=$(uname -m)
 
 if [ "$system_type" = "Darwin" ]; then
 
+  if ! command -v devbox >/dev/null 2>&1; then
+    echo "Installing devbox"
+    curl -fsSL https://get.jetify.com/devbox | bash
+  fi
+  
   # install homebrew if it's missing
   if ! command -v brew >/dev/null 2>&1; then
     echo "Installing homebrew"
