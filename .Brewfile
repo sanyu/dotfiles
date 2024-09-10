@@ -336,7 +336,8 @@ brew "vmware-tanzu/carvel/kapp"
 # Tanzu Community Edition
 brew "vmware-tanzu/tanzu/tanzu-community-edition"
 brew "ykman"
-
+# Shell extension to navigate your filesystem faster
+brew "zoxide"
 # $work specific packages
 # brew "samuong/alpaca/alpaca" unless system "[[ ! -f ~/.config/work ]]"
 
