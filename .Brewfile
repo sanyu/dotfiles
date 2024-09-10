@@ -258,6 +258,8 @@ brew "sops"
 brew "stern"
 # Flexible, reusable and concise configuration for Kubernetes using Jsonnet
 brew "tanka"
+# Secrets management tool for developers
+brew "teller"
 # Tool to build, change, and version infrastructure
 brew "terraform", link: false
 # Improve Terraform's plan output
