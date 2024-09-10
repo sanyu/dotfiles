@@ -268,6 +268,8 @@ brew "terragrunt"
 brew "stefanprodan/tap/timoni"
 # Terraform version manager inspired by rbenv
 brew "tfenv"
+# Shell extension to navigate your filesystem faster
+brew thefuck
 # Code-search similar to ack
 brew "the_silver_searcher"
 # Terminal multiplexer
