@@ -48,6 +48,8 @@ brew "cilium-cli"
 brew "cloudflared"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Container Signing
+brew "cosign"
 # Like cURL, but for gRPC
 brew "grpcurl"
 # Generic library support script
