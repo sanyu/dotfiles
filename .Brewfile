@@ -391,7 +391,7 @@ cask "iterm2"
 cask "openlens"
 cask "okta"
 # Software for Logitech devices
-cask "logi-options-plus"
+cask "logi-options+"
 # Support for Logitech G gear
 cask "logitech-g-hub"
 # Tool to control external monitor brightness & volume
